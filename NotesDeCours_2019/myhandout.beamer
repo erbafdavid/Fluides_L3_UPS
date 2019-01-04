@@ -1,0 +1,116 @@
+%
+% myslides.beamer: (theme, colors, etc.) specifications for personalized slides with Beamer.
+%
+
+% My Beamer colors:
+% -----------------
+
+\definecolor{beamer_grey555}{rgb}{0.5, 0.5, 0.5}
+\definecolor{beamer_grey888}{rgb}{0.8, 0.8, 0.8}
+\definecolor{beamer_grey999}{rgb}{0.9, 0.9, 0.9}
+\definecolor{beamer_green262}{rgb}{0.2, 0.6, 0.2}
+\definecolor{beamer_red820}{rgb}{0.8, 0.2, 0.0}
+\definecolor{beamer_blue057}{rgb}{0., 0., 0.} % ou {0.0, 0.5, 0.7}
+\definecolor{beamer_blue246}{rgb}{0., 0., 0.} % ou {0.2, 0.4, 0.6}
+\definecolor{beamer_blue999}{rgb}{0., 0., 0.} % ou {0.92, 0.94, 0.96}
+
+%\setbeamertemplate{navigation symbols}{\insertframenumber}
+
+\setbeamertemplate{itemize item}[ball]
+
+\setbeamertemplate{section in toc}[sections numbered]%unnumbered]
+
+\setbeamertemplate{subsection in toc}[square]
+\setbeamercolor{item projected}{fg=beamer_blue246,bg=beamer_blue999}
+
+\setbeamercolor{section in toc}{fg=beamer_blue246}
+
+\setbeamercolor{subsection in toc}{fg=beamer_blue246}
+
+\setbeamertemplate{frametitlecontinuation}{\insertcontinuationcountroman} 
+
+\setbeamersize{text margin left=10mm,text margin right=10mm}
+
+% Fait afficher l'ensemble du frame en peu lisible (gris clair) dès l'ouverture
+%\beamertemplatetransparentcovered
+
+
+
+
+% FRAMETITLE:
+
+
+% Definition of frametitle:
+% -------------------------
+
+\pgfdeclarehorizontalshading{myhorizontalshade}{5.5ex}{%
+  color(0pt)=(beamer_blue999);
+  color(\paperwidth)=(beamer_blue246)
+}
+
+\pgfdeclareverticalshading{myverticalshade}{\paperwidth}{%
+	color(0pt)=(white);
+  color(4pt)=(black!50!beamer_blue246!50)
+}
+
+\setbeamercolor{my_frametitle}{bg=white}
+
+\defbeamertemplate*{frametitle}{myslides theme}
+{
+	\nointerlineskip%
+	\leavevmode%
+	\hbox{%
+	\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.5ex,left]{my_frametitle}%
+  \vbox to 2.5ex{%
+  %\pgfuseshading{myhorizontalshade}% comment this line to go back to "my_frametitle" flat color
+  \vss
+  \hspace{2ex} \color{black} \normalsize \bfseries \insertframetitle{}}
+  \end{beamercolorbox}}%
+}
+
+% Definition of footline parts:
+% -----------------------------
+
+%\setbeamercolor{my_footline_left}{bg=black, fg=beamer_blue999}
+%\setbeamercolor{my_footline_center}{bg=black, fg=beamer_blue999}
+%\setbeamercolor{my_footline_right}{bg=black, fg=beamer_blue999}
+%
+%\defbeamertemplate*{footline}{myslides theme}
+%{
+%  \leavevmode%
+%  \hbox{%
+%  \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=1ex,left]{my_footline_left}%
+%    \hspace*{1ex} \insertshortsubtitle
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.78\paperwidth,ht=2.25ex,dp=1ex,center]{my_footline_center}%
+%    \hspace*{1ex} \insertshortdate{}
+%  \end{beamercolorbox}%
+%  \begin{beamercolorbox}[wd=.07\paperwidth,ht=2.25ex,dp=1ex,right]{my_footline_right}%
+%     \insertframenumber{}\hspace*{1ex}
+%  \end{beamercolorbox}}%
+%  \vskip10pt%
+%}
+
+% Definition of headline parts:
+% -----------------------------
+
+\setbeamercolor{my_headline_left}{bg=beamer_grey999, fg=black}
+\setbeamercolor{my_headline_center}{bg=beamer_grey999, fg=black}
+\setbeamercolor{my_headline_right}{bg=beamer_grey999, fg=black}
+
+\defbeamertemplate*{headline}{myslides theme}
+{
+  \leavevmode%
+  \vskip8pt
+  \hbox{%
+  \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.25ex,dp=1ex,right]{my_headline_left}%
+     \insertsectionhead \hspace*{1ex}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.25ex,dp=1ex,left]{my_headline_center}%
+    \hspace*{1ex} \slshape \insertsubsectionhead
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,right]{my_headline_right}%
+     \insertframenumber{}\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}

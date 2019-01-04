@@ -1,0 +1,366 @@
+\headcommand {\slideentry {1}{3}{7}{19/19}{Les \IeC {\'e}coulements de films minces}{1}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\partentry {Ecoulements Inertiels}{2}}
+\headcommand {\beamer@partpages {2}{19}}
+\headcommand {\beamer@sectionpages {2}{19}}
+\headcommand {\beamer@subsectionpages {13}{19}}
+\headcommand {\sectionentry {2}{\bfseries 7. Ecoulements inertiels}{20}{\bfseries 7. Ecoulements inertiels}{2}}
+\headcommand {\beamer@sectionpages {20}{19}}
+\headcommand {\beamer@subsectionpages {20}{19}}
+\headcommand {\beamer@subsectionentry {2}{2}{1}{20}{L'approximation d'\IeC {\'e}coulement inertiel}}\headcommand {\beamer@subsectionpages {20}{19}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{1}{1}{20}{D\IeC {\'e}finitions}}
+\headcommand {\slideentry {2}{1}{1}{20/20}{L'approximation d'\IeC {\'e}coulement inertiel}{2}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{1}{2}{21}{Exemples}}
+\headcommand {\slideentry {2}{1}{2}{21/21}{L'approximation d'\IeC {\'e}coulement inertiel}{2}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@subsectionentry {2}{2}{2}{22}{Le mod\IeC {\`e}le de fluide parfait}}\headcommand {\beamer@subsectionpages {20}{21}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{2}{1}{22}{L'\IeC {\'e}quation d'Euler}}
+\headcommand {\slideentry {2}{2}{1}{22/22}{Le mod\IeC {\`e}le de fluide parfait}{2}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{2}{2}{23}{Ecoulement de fluide parfait}}
+\headcommand {\slideentry {2}{2}{2}{23/23}{Le mod\IeC {\`e}le de fluide parfait}{2}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {2}{2}{3}{24/24}{Le mod\IeC {\`e}le de fluide parfait}{2}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@subsectionentry {2}{2}{3}{25}{Th\IeC {\'e}or\IeC {\`e}mes locaux}}\headcommand {\beamer@subsectionpages {22}{24}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{3}{1}{25}{Equation-bilan pour l'\IeC {\'e}nergie cin\IeC {\'e}tique}}
+\headcommand {\slideentry {2}{3}{1}{25/25}{Th\IeC {\'e}or\IeC {\`e}mes locaux}{2}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{3}{2}{26}{Premier th\IeC {\'e}or\IeC {\`e}me de Bernoulli}}
+\headcommand {\slideentry {2}{3}{2}{26/26}{Th\IeC {\'e}or\IeC {\`e}mes locaux}{2}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{3}{3}{27}{Applications de Bernoulli}}
+\headcommand {\slideentry {2}{3}{3}{27/27}{Th\IeC {\'e}or\IeC {\`e}mes locaux}{2}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{3}{4}{28}{Equations intrins\IeC {\`e}ques}}
+\headcommand {\slideentry {2}{3}{4}{28/28}{Th\IeC {\'e}or\IeC {\`e}mes locaux}{2}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@subsectionentry {2}{2}{4}{29}{Th\IeC {\'e}or\IeC {\`e}mes int\IeC {\'e}graux}}\headcommand {\beamer@subsectionpages {25}{28}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{4}{1}{29}{Motivation}}
+\headcommand {\slideentry {2}{4}{1}{29/29}{Th\IeC {\'e}or\IeC {\`e}mes int\IeC {\'e}graux}{2}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{4}{2}{30}{Th\IeC {\'e}or\IeC {\`e}me d'Euler}}
+\headcommand {\slideentry {2}{4}{2}{30/30}{Th\IeC {\'e}or\IeC {\`e}mes int\IeC {\'e}graux}{2}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@subsubsectionentry {2}{2}{4}{3}{31}{Applications}}
+\headcommand {\slideentry {2}{4}{3}{31/31}{Th\IeC {\'e}or\IeC {\`e}mes int\IeC {\'e}graux}{2}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {2}{4}{4}{32/32}{Th\IeC {\'e}or\IeC {\`e}mes int\IeC {\'e}graux}{2}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\partentry {Ecoulements Potentiels - A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@partpages {20}{32}}
+\headcommand {\beamer@sectionpages {20}{32}}
+\headcommand {\beamer@subsectionpages {29}{32}}
+\headcommand {\sectionentry {3}{\bfseries 8. Ecoulements Potentiels - A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{33}{\bfseries 8. Ecoulements Potentiels - A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@sectionpages {33}{32}}
+\headcommand {\beamer@subsectionpages {33}{32}}
+\headcommand {\beamer@subsectionentry {3}{3}{1}{33}{Ecoulements potentiels}}\headcommand {\beamer@subsectionpages {33}{32}}
+\headcommand {\beamer@subsubsectionentry {3}{3}{1}{1}{33}{Dynamique de la vorticit\IeC {\'e}}}
+\headcommand {\slideentry {3}{1}{1}{33/33}{Ecoulements potentiels}{3}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@subsubsectionentry {3}{3}{1}{2}{34}{Ecoulements potentiels : d\IeC {\'e}finition et propri\IeC {\'e}t\IeC {\'e}s}}
+\headcommand {\slideentry {3}{1}{2}{34/34}{Ecoulements potentiels}{3}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {3}{1}{3}{35/35}{Ecoulements potentiels}{3}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {3}{1}{4}{36/36}{Ecoulements potentiels}{3}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\beamer@subsubsectionentry {3}{3}{1}{3}{37}{Second th\IeC {\'e}or\IeC {\`e}me de Bernoulli}}
+\headcommand {\slideentry {3}{1}{5}{37/37}{Ecoulements potentiels}{3}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\beamer@subsubsectionentry {3}{3}{1}{4}{38}{Ecoulements potentiels : exemples}}
+\headcommand {\slideentry {3}{1}{6}{38/38}{Ecoulements potentiels}{3}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {3}{1}{7}{39/39}{Ecoulements potentiels}{3}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\beamer@subsectionentry {3}{3}{2}{40}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}}\headcommand {\beamer@subsectionpages {33}{39}}
+\headcommand {\beamer@subsubsectionentry {3}{3}{2}{1}{40}{Mod\IeC {\'e}lisation g\IeC {\'e}n\IeC {\'e}rale}}
+\headcommand {\slideentry {3}{2}{1}{40/40}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {3}{2}{2}{41/41}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\beamer@subsubsectionentry {3}{3}{2}{2}{42}{Exemple 1 : le cylindre}}
+\headcommand {\slideentry {3}{2}{3}{42/42}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {3}{2}{4}{43/43}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {3}{2}{5}{44/44}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\slideentry {3}{2}{6}{45/45}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\beamer@subsubsectionentry {3}{3}{2}{3}{46}{Exemple 2 : la sph\IeC {\`e}re}}
+\headcommand {\slideentry {3}{2}{7}{46/46}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\slideentry {3}{2}{8}{47/47}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {3}{2}{9}{48/48}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@subsubsectionentry {3}{3}{2}{4}{49}{Exemple 3 : le profil d'aile}}
+\headcommand {\slideentry {3}{2}{10}{49/49}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {3}{2}{11}{50/50}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {3}{2}{12}{51/51}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {3}{2}{13}{52/52}{A\IeC {\'e}rodynamique \IeC {\`a} haut Reynolds}{3}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\partentry {Ecoulements en conduite}{4}}
+\headcommand {\beamer@partpages {1}{52}}
+\headcommand {\beamer@sectionpages {1}{52}}
+\headcommand {\beamer@subsectionpages {1}{52}}
+\headcommand {\slideentry {3}{0}{14}{53/53}{}{4}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {3}{0}{15}{54/54}{}{4}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\sectionentry {4}{\bfseries Ecoulements en conduite}{55}{\bfseries Ecoulements en conduite}{4}}
+\headcommand {\beamer@sectionpages {53}{54}}
+\headcommand {\beamer@subsectionpages {53}{54}}
+\headcommand {\beamer@subsectionentry {4}{4}{1}{55}{Ph\IeC {\'e}nom\IeC {\'e}nologie -- Observations}}\headcommand {\beamer@subsectionpages {55}{54}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{1}{55}{Exp\IeC {\'e}rience de Reynolds}}
+\headcommand {\slideentry {4}{1}{1}{55/55}{Ph\IeC {\'e}nom\IeC {\'e}nologie -- Observations}{4}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\slideentry {4}{1}{2}{56/56}{Ph\IeC {\'e}nom\IeC {\'e}nologie -- Observations}{4}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\slideentry {4}{1}{3}{57/57}{Ph\IeC {\'e}nom\IeC {\'e}nologie -- Observations}{4}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{2}{58}{R\IeC {\'e}gime laminaire}}
+\headcommand {\slideentry {4}{1}{4}{58/58}{Ph\IeC {\'e}nom\IeC {\'e}nologie -- Observations}{4}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{3}{59}{R\IeC {\'e}gime de transition}}
+\headcommand {\slideentry {4}{1}{5}{59/59}{Ph\IeC {\'e}nom\IeC {\'e}nologie -- Observations}{4}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{4}{60}{R\IeC {\'e}gime turbulent}}
+\headcommand {\slideentry {4}{1}{6}{60/60}{Ph\IeC {\'e}nom\IeC {\'e}nologie -- Observations}{4}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\beamer@subsectionentry {4}{4}{2}{61}{Mod\IeC {\'e}lisation et application des bilans int\IeC {\'e}graux}}\headcommand {\beamer@subsectionpages {55}{60}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{2}{1}{61}{Volume de contr\IeC {\^o}le}}
+\headcommand {\slideentry {4}{2}{1}{61/61}{Mod\IeC {\'e}lisation et application des bilans int\IeC {\'e}graux}{4}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{2}{2}{62}{Application des bilans int\IeC {\'e}graux}}
+\headcommand {\slideentry {4}{2}{2}{62/62}{Mod\IeC {\'e}lisation et application des bilans int\IeC {\'e}graux}{4}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\beamer@subsectionentry {4}{4}{3}{63}{Pertes de charge}}\headcommand {\beamer@subsectionpages {61}{62}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{3}{1}{63}{Notion de pertes de charge}}
+\headcommand {\slideentry {4}{3}{1}{63/63}{Pertes de charge}{4}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{3}{2}{64}{Pertes de charge r\IeC {\'e}guli\IeC {\`e}res}}
+\headcommand {\slideentry {4}{3}{2}{64/64}{Pertes de charge}{4}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\slideentry {4}{3}{3}{65/65}{Pertes de charge}{4}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\slideentry {4}{3}{4}{66/66}{Pertes de charge}{4}}
+\headcommand {\beamer@framepages {66}{66}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{3}{3}{67}{Pertes de charge singuli\IeC {\`e}res}}
+\headcommand {\slideentry {4}{3}{5}{67/67}{Pertes de charge}{4}}
+\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\slideentry {4}{3}{6}{68/68}{Pertes de charge}{4}}
+\headcommand {\beamer@framepages {68}{68}}
+\headcommand {\slideentry {4}{3}{7}{69/69}{Pertes de charge}{4}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\partentry {Chapitre 10 : Acoustique}{4}}
+\headcommand {\beamer@partpages {1}{52}}
+\headcommand {\beamer@sectionpages {1}{52}}
+\headcommand {\beamer@subsectionpages {1}{52}}
+\headcommand {\slideentry {3}{0}{14}{53/53}{}{4}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {3}{0}{15}{54/54}{}{4}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\sectionentry {4}{\bfseries Acoustique}{55}{\bfseries Acoustique}{4}}
+\headcommand {\beamer@sectionpages {53}{54}}
+\headcommand {\beamer@subsectionpages {53}{54}}
+\headcommand {\beamer@subsectionentry {4}{4}{1}{55}{Equations de l'acoustique}}\headcommand {\beamer@subsectionpages {55}{54}}
+\headcommand {\slideentry {4}{1}{1}{55/55}{Equations de l'acoustique}{4}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{1}{56}{Cadre de la mod\IeC {\'e}lisation}}
+\headcommand {\slideentry {4}{1}{2}{56/59}{Equations de l'acoustique}{4}}
+\headcommand {\beamer@framepages {56}{59}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{2}{60}{Equation de la quantit\IeC {\'e} de mouvement}}
+\headcommand {\slideentry {4}{1}{3}{60/61}{Equations de l'acoustique}{4}}
+\headcommand {\beamer@framepages {60}{61}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{3}{62}{Equation de la masse}}
+\headcommand {\slideentry {4}{1}{4}{62/64}{Equations de l'acoustique}{4}}
+\headcommand {\beamer@framepages {62}{64}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{4}{65}{Compressibilit\IeC {\'e} et vitesse du son}}
+\headcommand {\slideentry {4}{1}{5}{65/66}{Equations de l'acoustique}{4}}
+\headcommand {\beamer@framepages {65}{66}}
+\headcommand {\slideentry {4}{1}{6}{67/69}{Equations de l'acoustique}{4}}
+\headcommand {\beamer@framepages {67}{69}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{1}{5}{70}{Equation de Helmholtz}}
+\headcommand {\slideentry {4}{1}{7}{70/72}{Equations de l'acoustique}{4}}
+\headcommand {\beamer@framepages {70}{72}}
+\headcommand {\beamer@subsectionentry {4}{4}{2}{73}{Ondes planes}}\headcommand {\beamer@subsectionpages {55}{72}}
+\headcommand {\slideentry {4}{2}{1}{73/73}{Ondes planes}{4}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{2}{1}{74}{Solution g\IeC {\'e}n\IeC {\'e}rale}}
+\headcommand {\slideentry {4}{2}{2}{74/76}{Ondes planes}{4}}
+\headcommand {\beamer@framepages {74}{76}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{2}{2}{77}{R\IeC {\'e}flexions sur une extr\IeC {\'e}mit\IeC {\'e} ouverte ou ferm\IeC {\'e}e}}
+\headcommand {\slideentry {4}{2}{3}{77/77}{Ondes planes}{4}}
+\headcommand {\beamer@framepages {77}{77}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{2}{3}{78}{Ondes progressives monochromatiques}}
+\headcommand {\slideentry {4}{2}{4}{78/79}{Ondes planes}{4}}
+\headcommand {\beamer@framepages {78}{79}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{2}{4}{80}{Ondes stationnaires}}
+\headcommand {\slideentry {4}{2}{5}{80/80}{Ondes planes}{4}}
+\headcommand {\beamer@framepages {80}{80}}
+\headcommand {\beamer@subsectionentry {4}{4}{3}{81}{Energie et intensit\IeC {\'e} acoustiques}}\headcommand {\beamer@subsectionpages {73}{80}}
+\headcommand {\slideentry {4}{3}{1}{81/81}{Energie et intensit\IeC {\'e} acoustiques}{4}}
+\headcommand {\beamer@framepages {81}{81}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{3}{1}{82}{Equation de l'\IeC {\'e}nergie cin\IeC {\'e}tique}}
+\headcommand {\slideentry {4}{3}{2}{82/84}{Energie et intensit\IeC {\'e} acoustiques}{4}}
+\headcommand {\beamer@framepages {82}{84}}
+\headcommand {\beamer@subsubsectionentry {4}{4}{3}{2}{85}{Equation de l'\IeC {\'e}nergie acoustique}}
+\headcommand {\slideentry {4}{3}{3}{85/88}{Energie et intensit\IeC {\'e} acoustiques}{4}}
+\headcommand {\beamer@framepages {85}{88}}
+\headcommand {\beamer@subsectionentry {4}{4}{4}{89}{R\IeC {\'e}flexion et transmission sur une discontinuit\IeC {\'e}}}\headcommand {\beamer@subsectionpages {81}{88}}
+\headcommand {\slideentry {4}{4}{1}{89/89}{R\IeC {\'e}flexion et transmission sur une discontinuit\IeC {\'e}}{4}}
+\headcommand {\beamer@framepages {89}{89}}
+\headcommand {\slideentry {4}{4}{2}{90/90}{R\IeC {\'e}flexion et transmission sur une discontinuit\IeC {\'e}}{4}}
+\headcommand {\beamer@framepages {90}{90}}
+\headcommand {\beamer@subsectionentry {4}{4}{5}{91}{Ondes sph\IeC {\'e}riques}}\headcommand {\beamer@subsectionpages {89}{90}}
+\headcommand {\slideentry {4}{5}{1}{91/91}{Ondes sph\IeC {\'e}riques}{4}}
+\headcommand {\beamer@framepages {91}{91}}
+\headcommand {\slideentry {4}{5}{2}{92/92}{Ondes sph\IeC {\'e}riques}{4}}
+\headcommand {\beamer@framepages {92}{92}}
+\headcommand {\slideentry {4}{5}{3}{93/93}{Ondes sph\IeC {\'e}riques}{4}}
+\headcommand {\beamer@framepages {93}{93}}
+\headcommand {\slideentry {4}{5}{4}{94/94}{Ondes sph\IeC {\'e}riques}{4}}
+\headcommand {\beamer@framepages {94}{94}}
+\headcommand {\slideentry {4}{5}{5}{95/95}{Ondes sph\IeC {\'e}riques}{4}}
+\headcommand {\beamer@framepages {95}{95}}
+\headcommand {\partentry {Ecoulements compressibles}{5}}
+\headcommand {\beamer@partpages {1}{95}}
+\headcommand {\beamer@sectionpages {1}{95}}
+\headcommand {\beamer@subsectionpages {1}{95}}
+\headcommand {\slideentry {4}{0}{6}{96/96}{}{5}}
+\headcommand {\beamer@framepages {96}{96}}
+\headcommand {\slideentry {4}{0}{7}{97/97}{}{5}}
+\headcommand {\beamer@framepages {97}{97}}
+\headcommand {\sectionentry {5}{\bfseries Ecoulements compressibles}{98}{\bfseries Ecoulements compressibles}{5}}
+\headcommand {\beamer@sectionpages {96}{97}}
+\headcommand {\beamer@subsectionpages {96}{97}}
+\headcommand {\beamer@subsectionentry {5}{5}{1}{98}{Equations du mouvement d'un gaz compressible}}\headcommand {\beamer@subsectionpages {98}{97}}
+\headcommand {\slideentry {5}{1}{1}{98/98}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {98}{98}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{1}{1}{99}{Rappels de thermo et de cin\IeC {\'e}tique des gaz}}
+\headcommand {\slideentry {5}{1}{2}{99/99}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {99}{99}}
+\headcommand {\slideentry {5}{1}{3}{100/100}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {100}{100}}
+\headcommand {\slideentry {5}{1}{4}{101/101}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {101}{101}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{1}{2}{102}{Nombre de Mach}}
+\headcommand {\slideentry {5}{1}{5}{102/102}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {102}{102}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{1}{3}{103}{Equations d'Euler compressible}}
+\headcommand {\slideentry {5}{1}{6}{103/103}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {103}{103}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{1}{4}{104}{Equation-bilan de l'\IeC {\'e}nergie totale}}
+\headcommand {\slideentry {5}{1}{7}{104/104}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {104}{104}}
+\headcommand {\slideentry {5}{1}{8}{105/105}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {105}{105}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{1}{5}{106}{Bilan d'entropie}}
+\headcommand {\slideentry {5}{1}{9}{106/106}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {106}{106}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{1}{6}{107}{Relations de Barr\IeC {\'e}--St Venant}}
+\headcommand {\slideentry {5}{1}{10}{107/107}{Equations du mouvement d'un gaz compressible}{5}}
+\headcommand {\beamer@framepages {107}{107}}
+\headcommand {\beamer@subsectionentry {5}{5}{2}{108}{Ecoulements compressibles monodimensionnels}}\headcommand {\beamer@subsectionpages {98}{107}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{2}{1}{108}{Objectifs et hypoth\IeC {\`e}ses de mod\IeC {\'e}lisation}}
+\headcommand {\slideentry {5}{2}{1}{108/108}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {108}{108}}
+\headcommand {\slideentry {5}{2}{2}{109/109}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {109}{109}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{2}{2}{110}{Equations-bilan}}
+\headcommand {\slideentry {5}{2}{3}{110/110}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {110}{110}}
+\headcommand {\slideentry {5}{2}{4}{111/111}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {111}{111}}
+\headcommand {\slideentry {5}{2}{5}{112/112}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {112}{112}}
+\headcommand {\slideentry {5}{2}{6}{113/113}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {113}{113}}
+\headcommand {\slideentry {5}{2}{7}{114/114}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {114}{114}}
+\headcommand {\slideentry {5}{2}{8}{115/115}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {115}{115}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{2}{3}{116}{Relation de Hugoniot}}
+\headcommand {\slideentry {5}{2}{9}{116/116}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {116}{116}}
+\headcommand {\beamer@subsubsectionentry {5}{5}{2}{4}{117}{R\IeC {\'e}solution finale}}
+\headcommand {\slideentry {5}{2}{10}{117/117}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {117}{117}}
+\headcommand {\slideentry {5}{2}{11}{118/118}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {118}{118}}
+\headcommand {\slideentry {5}{2}{12}{119/119}{Ecoulements compressibles monodimensionnels}{5}}
+\headcommand {\beamer@framepages {119}{119}}
+\headcommand {\partentry {Ecoulements compressibles}{6}}
+\headcommand {\beamer@partpages {96}{119}}
+\headcommand {\beamer@sectionpages {98}{119}}
+\headcommand {\beamer@subsectionpages {108}{119}}
+\headcommand {\slideentry {5}{0}{13}{120/120}{}{6}}
+\headcommand {\beamer@framepages {120}{120}}
+\headcommand {\slideentry {5}{0}{14}{121/121}{}{6}}
+\headcommand {\beamer@framepages {121}{121}}
+\headcommand {\sectionentry {6}{\bfseries Ondes de choc}{122}{\bfseries Ondes de choc}{6}}
+\headcommand {\beamer@sectionpages {120}{121}}
+\headcommand {\beamer@subsectionpages {120}{121}}
+\headcommand {\beamer@subsectionentry {6}{6}{1}{122}{Introduction}}\headcommand {\beamer@subsectionpages {122}{121}}
+\headcommand {\beamer@subsubsectionentry {6}{6}{1}{1}{122}{Contexte et motivations}}
+\headcommand {\slideentry {6}{1}{1}{122/122}{Introduction}{6}}
+\headcommand {\beamer@framepages {122}{122}}
+\headcommand {\beamer@subsubsectionentry {6}{6}{1}{2}{123}{Ph\IeC {\'e}nom\IeC {\'e}nologie -- Observations}}
+\headcommand {\slideentry {6}{1}{2}{123/123}{Introduction}{6}}
+\headcommand {\beamer@framepages {123}{123}}
+\headcommand {\slideentry {6}{1}{3}{124/124}{Introduction}{6}}
+\headcommand {\beamer@framepages {124}{124}}
+\headcommand {\slideentry {6}{1}{4}{125/125}{Introduction}{6}}
+\headcommand {\beamer@framepages {125}{125}}
+\headcommand {\slideentry {6}{1}{5}{126/126}{Introduction}{6}}
+\headcommand {\beamer@framepages {126}{126}}
+\headcommand {\slideentry {6}{1}{6}{127/127}{Introduction}{6}}
+\headcommand {\beamer@framepages {127}{127}}
+\headcommand {\slideentry {6}{1}{7}{128/128}{Introduction}{6}}
+\headcommand {\beamer@framepages {128}{128}}
+\headcommand {\beamer@subsectionentry {6}{6}{2}{129}{Equations de bilan \IeC {\`a} travers un choc droit}}\headcommand {\beamer@subsectionpages {122}{128}}
+\headcommand {\beamer@subsubsectionentry {6}{6}{2}{1}{129}{Mod\IeC {\'e}lisation}}
+\headcommand {\slideentry {6}{2}{1}{129/129}{Equations de bilan \IeC {\`a} travers un choc droit}{6}}
+\headcommand {\beamer@framepages {129}{129}}
+\headcommand {\beamer@subsubsectionentry {6}{6}{2}{2}{130}{Application des principes de conservation}}
+\headcommand {\slideentry {6}{2}{2}{130/130}{Equations de bilan \IeC {\`a} travers un choc droit}{6}}
+\headcommand {\beamer@framepages {130}{130}}
+\headcommand {\slideentry {6}{2}{3}{131/131}{Equations de bilan \IeC {\`a} travers un choc droit}{6}}
+\headcommand {\beamer@framepages {131}{131}}
+\headcommand {\slideentry {6}{2}{4}{132/132}{Equations de bilan \IeC {\`a} travers un choc droit}{6}}
+\headcommand {\beamer@framepages {132}{132}}
+\headcommand {\slideentry {6}{2}{5}{133/133}{Equations de bilan \IeC {\`a} travers un choc droit}{6}}
+\headcommand {\beamer@framepages {133}{133}}
+\headcommand {\beamer@subsectionentry {6}{6}{3}{134}{Relations de saut \IeC {\`a} travers le choc droit}}\headcommand {\beamer@subsectionpages {129}{133}}
+\headcommand {\beamer@subsubsectionentry {6}{6}{3}{1}{134}{Rapports aval/amont}}
+\headcommand {\slideentry {6}{3}{1}{134/134}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {134}{134}}
+\headcommand {\slideentry {6}{3}{2}{135/135}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {135}{135}}
+\headcommand {\slideentry {6}{3}{3}{136/136}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {136}{136}}
+\headcommand {\slideentry {6}{3}{4}{137/137}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {137}{137}}
+\headcommand {\slideentry {6}{3}{5}{138/138}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {138}{138}}
+\headcommand {\beamer@subsubsectionentry {6}{6}{3}{2}{139}{Saut des grandeurs g\IeC {\'e}n\IeC {\'e}ratrices}}
+\headcommand {\slideentry {6}{3}{6}{139/139}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {139}{139}}
+\headcommand {\slideentry {6}{3}{7}{140/140}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {140}{140}}
+\headcommand {\beamer@subsubsectionentry {6}{6}{3}{3}{141}{Saut d'entropie}}
+\headcommand {\slideentry {6}{3}{8}{141/141}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {141}{141}}
+\headcommand {\slideentry {6}{3}{9}{142/142}{Relations de saut \IeC {\`a} travers le choc droit}{6}}
+\headcommand {\beamer@framepages {142}{142}}
+\headcommand {\beamer@partpages {53}{142}}
+\headcommand {\beamer@subsectionpages {63}{142}}
+\headcommand {\beamer@sectionpages {55}{142}}
+\headcommand {\beamer@documentpages {142}}
+\headcommand {\def \inserttotalframenumber {123}}

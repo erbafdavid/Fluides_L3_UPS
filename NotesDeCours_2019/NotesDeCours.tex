@@ -1,0 +1,311 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [HANDOUT] A commenter pour des notes de cours à distribuer :
+%\documentclass[slidetop, onlymath, 8pt]{beamer}
+%\newcommand{\handout}[1]{}
+%\newcommand{\nohandout}[1]{#1}
+
+
+
+
+% [HANDOUT] A décommenter pour des notes de cours à distribuer :
+ \documentclass[handout, onlymath, 8pt]{beamer}
+ \newcommand{\handout}[1]{#1}
+ \newcommand{\nohandout}[1]{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\includeonly{
+%Chap6_EcoulementsVisqueux,
+%Chap7_EcoulementsInertiels,
+%Chap8_EcoulementsPotentiels,
+Chap9_EcoulementsEnConduite,
+%Chap10_Acoustique,
+%Chap11_Compressible,
+%Chap12_Chocs
+}
+
+
+
+
+
+% Pour impression sous forme de notes à distribuer :
+% --------------------------------------------------
+%
+% 1/ decommenter la ligne "\documentclass[handout, ..." 
+%    et commenter la ligne "\documentclass[slidetop, ..."
+%
+% 2/ commenter la ligne "\input{./myslides.beamer}"
+%    et décommenter la ligne "\input{./myhandout.beamer}"
+%
+% 3/ idem pour les autres points éventuels commentés par [HANDOUT] dans le préambule
+%
+% 4/ Supprimer les environnements overprint
+%
+% 5/ sauvegarder dans un nouveau fichier (toto_handout.tex par exemple)
+%
+% 6/ compiler ce nouveau fichier et l'éditer avec Aperçu.
+%
+% 7/ dans Aperçu, imprimer en landscape avec > ajuster : remplir le papier en entier
+%
+% 8/ dans Aperçu/mise en page : 4 pages par feuille avec > Orientation "anti-N" (3ème choix)
+
+\usefonttheme{serif} % pour avoir les expressions maths en serif
+
+% -------------------------------------------------------------------------------------------------
+% Packages :
+% -------------------------------------------------------------------------------------------------
+
+%\usepackage{mathabx}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel} 
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{accents}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{animate}
+\usepackage{multimedia} % Pour inclure des films dans la présentation
+\usepackage{hyperref}
+
+% -------------------------------------------------------------------------------------------------
+% Macros :
+% -------------------------------------------------------------------------------------------------
+
+\input{./mymacros.tex}
+
+% Autres macros :
+
+\renewcommand{\indice}[1]{_{\mbox{\footnotesize #1}}}
+\newcommand{\myend}{\end{document}}
+\newcommand{\mysubsection}[1]{\subsection*[#1]{\small \slshape #1}}
+\renewcommand{\mysection}[1]{\section*{\bfseries \color{white} #1}}
+\newcommand{\eaverage}[1]{\,<\!#1\!>\ }
+\newcommand{\mylesssim}{\ \mbox{\tiny $\lesssim$}}
+\newcommand{\mytabbing}[1]{\\ \textcolor{white}{#1}}
+\newcommand{\myhskip}[1]{\textcolor{white}{#1}}
+
+
+% -------------------------------------------------------------------------------------------------
+% Divers :
+% -------------------------------------------------------------------------------------------------
+
+% Tailles :
+\setlength{\unitlength}{1mm}
+
+% Couleurs :
+\definecolor{blanc}{rgb}{1.0, 1.0, 1.0}
+\definecolor{gris}{rgb}{0.5, 0.5, 0.5}
+\definecolor{vert}{rgb}{0.1, 0.6, 0.1}
+\definecolor{rouge}{rgb}{0.9, 0.1, 0.0}
+%\definecolor{bleu}{rgb}{0.0, 0.5, 0.7}
+\definecolor{bleu}{rgb}{0.2, 0.4, 0.8}
+\definecolor{experimental}{rgb}{0.6, 0.7, 0.4}
+\definecolor{numerique}{rgb}{0.8, 0.2, 0.0}
+\definecolor{theorique}{rgb}{0.0, 0.5, 0.7}
+
+% Chemin d'accès des figures :
+\graphicspath{{Figures/}{Abstract/}}
+
+% N'affiche pas les subsubsections dans le toc:
+%\setcounter{tocdepth}{2}
+
+\newcommand{\nbsd}[1]{\textcolor{vert}{\sc #1}}
+\newcommand{\Knudsen}{\textrm{Kn}}
+\newcommand{\Bond}{\textrm{Bo}}
+\newcommand{\mybaselineskip}[2]{{\setlength{\baselineskip}{#1\baselineskip}#2\par}}
+
+% =================================================================================================
+% Paramètres BEAMER :
+% =================================================================================================
+
+% -------------------------------------------------------------------------------------------------
+% Contenu de la page de titre :
+% -------------------------------------------------------------------------------------------------
+
+\title%
+    [\slshape Mécanique des fluides]%
+    {}
+\subtitle%
+    [L3 Mécanique 2015-2016]{}
+%\author%
+%    {\textcolor{bleu}{Pierre Brancher}}
+%\institute%
+%    {\small Institut de Mécanique des Fluides de Toulouse \\ (UMR 5502 CNRS/INP-UPS)%
+%    \\ Université Paul Sabatier (Toulouse III)}
+    \date%
+    [Mécanique des fluides]%
+%    {Dynamique tourbillonnaire : introduction}
+
+% [HANDOUT] A commenter pour des notes de cours à distribuer :
+%\input{./myslides.beamer}
+\handout{
+ \input{./myslides.beamer}
+}
+
+% [HANDOUT] A décommenter pour des notes de cours à distribuer :
+\nohandout{
+ \input{./myhandout.beamer}
+}
+
+% Pour que la présentation apparaisse d'emblée en plein écran :
+%\hypersetup{pdfpagemode=FullScreen}
+
+% -------------------------------------------------------------------------------------------------
+% Inclusion d'un logo
+% -------------------------------------------------------------------------------------------------
+%\logo{\includegraphics[width=12mm]{logo_IMFT.png}}
+
+% =================================================================================================
+% Elements à inclure le cas échéant dans le corps du texte :
+% =================================================================================================
+
+% -------------------------------------------------------------------------------------------------
+% Pour jouer un film
+% -------------------------------------------------------------------------------------------------
+
+% \movie[width=8cm,height=3cm,poster,externalviewer,showcontrols=true]{}{anti-lift-up.avi}
+% ou 
+% \hyperlinkmovie{anti-lift-up.avi}{film}
+
+% [HANDOUT] A commenter pour des notes de cours à distribuer :
+%
+\nohandout{
+\AtBeginSubsection[]{
+  \begin{frame}{\,} \small
+  \vspace*{9.2mm}
+  \hspace*{2mm}
+  \begin{tabular}{cc}
+		%&
+  		\begin{minipage}{62mm}
+  			\tableofcontents[currentsubsection]
+      \vspace{29mm}
+  		\end{minipage}
+  		&   
+  		\begin{minipage}{60cm}
+		  \vspace*{-5mm}  
+  			%\includegraphics[width=40mm]{vagues.jpg} 
+  		\end{minipage}
+  	\end{tabular}
+  \vspace{0mm}
+  \end{frame}
+}
+}
+
+\usepackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\comment}[1]{}
+
+
+%\makeatletter
+%\AtBeginPart{%
+ % \beamer@tocsectionnumber=0\relax
+  %\setcounter{section}{0}
+  %\frame{\partpage}%
+%}
+%\makeatother
+
+
+% Pour faire des tables des matières séparées
+%\makeatletter
+%\numberwithin{section}{part}
+%\AtBeginPart{\beamer@tocsectionnumber=\thepart\relax
+%}
+%\makeatother
+
+
+
+
+
+\begin{document}
+
+
+%\begin{frame}
+%\titlepage
+%\end{frame}
+%
+%\begin{frame}{Plan du cours}
+%\setcounter{tocdepth}{1}
+%%\vspace{-10cm}
+%\tableofcontents[part=0]
+%%\vspace{-4cm}
+%\tableofcontents[part=1]
+%%\vspace{-4cm}
+%\tableofcontents[part=2]
+%%\vspace{-4cm}
+%\tableofcontents[part=3]
+%%\vspace{-4cm}
+%\tableofcontents[part=4]
+%%\vspace{-4cm}
+%\tableofcontents[part=5]
+%%\vspace{-4cm}
+%\tableofcontents[part=6]
+%%\vspace{-4cm}
+%\tableofcontents[part=7]
+%%\vspace{-4cm}
+%\tableofcontents[part=8]
+%%\vspace{-4cm}
+%\tableofcontents[part=9]
+%%\vspace{-4cm}
+%
+%
+%
+%\setcounter{tocdepth}{2}
+%\end{frame}
+
+%
+%%
+%\begin{frame}{Organisation du cours :}
+%%
+%%
+%\begin{enumerate}
+%\item Introduction -- Analyse dimensionnelle 
+%\item Forces dans les fluides au repos -- Hydrostatique
+%\item Forces dans les fluides en mouvement 
+%\item Cinématique
+%\item Equations-bilan -- Régimes d'écoulement
+%\item Ecoulements visqueux
+%\item Ecoulements inertiels
+%\item Ecoulements potentiels et aérodynamique à haut Re
+%\item Ecoulements en conduite
+%\item Acoustique
+%\item Ecoulements compressibles
+%\item Ondes de choc
+%
+%\end{enumerate}
+%
+%\end{frame}
+
+%\include{Chap0_IntroGenerale}
+%\include{Chap1_AnalyseDimensionnelle}
+%\part{Hydrostatique}
+%\section{Forces dans les fluides au repos (a remplir...)} 
+%\include{Chap2_Hydrostatique}
+%\part{Viscosite}
+%\section{Forces dans les fluides en mouvement (a remplir...)}
+%\include{Chap3_Viscosite}
+%\include{Chap4_Cinematique}
+
+%\include{Chap5_EquationsBilan}
+
+
+\include{Chap6_EcoulementsVisqueux}
+\include{Chap7_EcoulementsInertiels}
+\include{Chap8_EcoulementsPotentiels}
+\include{Chap9_EcoulementsEnConduite}
+\include{Chap10_Acoustique}
+\include{Chap11_Compressible}
+\include{Chap12_Chocs}
+
+
+
+
+
+
+\end{document}
