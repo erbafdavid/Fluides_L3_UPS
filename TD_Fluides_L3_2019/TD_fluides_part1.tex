@@ -46,9 +46,14 @@
 \newcommand{\Archives}[1]{}
 \newcommand{\comment}[1]{}
 
-\newcommand{\rep}[1]{}
+\newcommand{\rep}[1]{} % Décommenter pour masquer les corrigés
+%\newcommand{\rep}[1]{ {\em #1 } } % Décommenter pour compiler avec les corrigés
+
 
 \graphicspath{{Figures/}}
+
+%\includeonly{TD_AnalyseDimensionnelle}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}                                          
@@ -87,6 +92,7 @@
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \include{TD_AnalyseDimensionnelle}
 \include{TD_Hydrostatique}
 \include{TD_Cinematique}
@@ -95,7 +101,6 @@
 \include{TD_Viscosite3}
 \appendix
 \include{TD_RevisionsPart1}
-%\include{TD_Annexes}
 
 
 

@@ -1,4 +1,4 @@
-% !TEX root = TD_fluides_part2_2018.tex
+% !TEX root = TD_fluides_part2.tex
 
 \setcounter{section}{6}
 
@@ -11,10 +11,306 @@
 \setcounter{subsection}{-1}
 
 
-\subsection{Vidange d'un réservoir}
 
-{\em Exercice préparatoire ; énoncé et correction détaillée sur moodle}
+\subsection{Estimation de la traînée d'un cylindre (Exam mai 2017)}
 
+
+On étudie l'écoulement stationnaire autour d'un cylindre fixe de rayon $a$ et de longueur infinie dans la direction $z$ (écoulement bidimensionnel dans le plan $(x,y)$ ). 
+Le fluide est considéré comme un liquide incompressible de masse volumique $\rho$ constante et de viscosité $\nu$. On néglige l'effet de la pesanteur.
+On cherche a estimer la force 
+${\bf F} = F_x {\bf e_x} + F_y {\bf e_y} $ exercée par le fluide sur le cylindre a partir de bilans intégraux.
+
+%Loin du cylindre, l'écoulement est supposé uniforme, de direction $\myvec{e}_x$ et de valeur %$U_0$, et la pression est également uniforme et vaut $P_0$.
+
+
+\begin{figure}[htb]
+  \begin{center}
+      \includegraphics[width=.9\linewidth]{Cylindre_Bilan.png}
+      \end{center}
+      \vspace{-1cm}
+\end{figure}
+
+%La modélisation potentielle des deux parties précédentes ne permet pas de prédire la force de traînée, qui est due aux frottements visqueux à la surface du cylindre. Dans cette partie
+%on cherche à estimer cette force de traînée par un bilan intégral dans le cas non tournant ($\Omega = 0$),  a partir de la loi de vitesse observée dans le sillage du cylindre à une distance $L$ de celui-ci.
+
+%On cherche à estimer la force de traînée par un bilan intégral,  
+%a partir de la loi de vitesse observée dans le sillage du cylindre à une distance $L$ de celui-ci.
+ On considère pour cela un volume de contrôle correspondant à un domaine parallélépipédique 
+ de largeur $2b$, longueur $2L$, et profondeur $2H$ (dans la direction z).  Les champ de vitesse ${\bf u} = u {\bf e_x} + v {\bf e_y} $  et de pression sur les frontières de ce volume de contrôle sont indiqués sur la figure. %Les lois $v(x,\pm b)$ et $u(L,y)$ sont 
+ La troisième composante de vitesse $w$ est nulle sur toutes les frontières du domaine.
+ On suppose que les effets visqueux sont négligeables loin du cylindre (y compris sur les frontières du volume de contrôle).
+
+\begin{enumerate}
+
+\item Ecrire un bilan de masse sur le volume de contrôle, et en déduire une relation intégrale reliant $U_0$, $u(L,y)$, $v(x,-b)$ et $v(x,b)$.
+(ici et dans la question suivante on ne cherchera pas à calculer les intégrales apparaissant dans l'expression).
+
+
+\item Ecrire un bilan de quantité de mouvement (théorème d'Euler) projeté dans la direction $x$, et en déduire une expression de la traînée (composante $F_x$ de la force exercée) sur le cylindre en fonction du champ de vitesse sur les frontières du domaine.
+
+
+%\item Ecrire également un bilan de masse, et en déduire une relation intégrale reliant $u(L,y)$, 
+%$v(x,-b)$ et $v(x,b)$.
+
+\item En combinant les équations obtenues aux deux questions précédentes, montrez que la force de traînée peut être estimée par l'équation suivante :
+$
+F_x = 2 H \int_{-b}^{b} u(L,y) \left( U_0 - u(L,y) \right) dy 
+$
+
+
+\item
+Application. On suppose qu'en sortie le profil de vitesse peut être approximé par la loi suivante: 
+$$
+u(L,y) = \left\{ \begin{array}{ll} U_0 \quad & |y|> a \\ 0.7 U_0 \quad & |y|< a \end{array}
+\right.
+$$
+
+En déduire le coefficient de traînée $C_x = F_x / (\rho U_0^2 a H)$.
+
+
+\item A partir d'un bilan de quantité de mouvement projeté dans la direction $y$, donnez une expression de la portance (composante $F_y$ de la force exercée) en fonction de la vitesse sur les frontières du domaine. A quelle condition cette portance est-elle nulle ? interprétez physiquement.
+
+
+\end{enumerate}
+
+
+
+\subsection{Ski nautique} 
+
+$$
+\includegraphics[width= .95 \linewidth]{../FIGURES/SkiNautique2.pdf}
+$$
+\vspace{-5cm}
+
+Un skieur nautique se déplace à une vitesse $V_0$ (en module) sur une étendue d'eau 
+(fluide de propriétés $\rho = 1000 kg/m^3$ et $\nu = 1\cdot 10^{-6} m^2/s$ supposées uniformes) dans l'environnement terrestre au niveau de la mer ($P_{atm} = 10^5 Pa $; $g =10m^2/s$) .
+
+ Il utilise un monoski, supposé rectangulaire, de longueur $L= 1.5m$  et largeur $\ell = 20cm$.
+
+On cherche à estimer la force $\vec F$ exercée sur le ski.
+
+Dans les applications numériques on prendra une valeur de la vitesse $V_0 = 25km/h$.
+
+%\begin{figure}
+
+%\end{figure}
+
+
+\subsection*{A. Analyse du problème}
+
+\begin{enumerate}
+
+\item A quel régime d'écoulement a-t-on affaire dans ce problème ?
+(justifiez en terme de nombres adimensionnels et/ou d'hypothèses physiques).
+
+\rep{Avec les données de l'énoncé le nombre de Reynolds vaut $Re = V_0 L/\nu \approx 10^7$,
+donc on est dans un régime inertiel. L'écoulement est de plus incompressible (ou plus exactement isovolume) car l'eau est considéré comme un fluide incompressible (hypothèse justifiée dans la grande majorité des applications ).}
+
+
+\item On étudie le problème dans le référentiel du skieur, ce qui a l'avantage de pouvoir supposer que l'écoulement d'eau est {\em stationnaire}.
+On observe que sous le ski une partie de l'écoulement d'eau est réorienté sous la forme d'un jet d'eau vers l'avant, qui déferle ensuite (voir figure).
+
+Justifiez l'existence d'un point d'arrêt $S$ situé sous le ski. Tracez la forme de la ligne de courant passant par  $S$, ainsi que quelques lignes de courant voisines de celles-ci.
+
+\rep{Une partie de l'eau est réorientée vers l'avant et le reste s'écoule vers l'arrière, il y a donc une ligne de courant qui délimite ces deux régions et celle-ci s'arrête sur la surface inférieure du ski.}
+
+\item On note $[z]$ l'{\em ordre de grandeur des variations d'altitude} dans l'écoulement, et on définit le nombre de Froude par $Fr = \frac{V_0^2}{g [z]} $ Vérifiez que ce nombre est sans dimensions. Quelle est son interprétation physique ?
+
+\rep{ $[Fr] =  \frac{ (m/s)^2}{m/s^2 \cdot m} = 1$. L'interprétation de ce nombre est le rapport entre une énergie cinétique massique et une (variation d')énergie potentielle massique de gravité.
+} 
+
+\item En comparant l'ordre de grandeur des différents termes dans l'équation de Bernoulli, montrez que si $Fr \gg 1$ celle-ci se simplifie et conduit à $p+\rho |\vec{u}|^2/2 = cte$. 
+
+\rep{ $[ \rho g z] \approx \rho g [z]$ et $[\rho |\vec{u}|^2/2] \approx \rho V_0^2$, le rapport de ces deux termes et le nombre de Froude.  Si $Fr \gg 1$ le premier terme est négligeable.
+}
+
+\item Justifiez qu'il est raisonnable de supposer $[z] \approx \ell$. En tirer les conclusions. 
+
+\rep{L'écoulement est en réalité tridimensionnel avec une largeur caractéristique $\ell$ dans la direction transverse. Au cours de leur mouvement, l'amplitude du déplacement latéral des particules d'eau (d'ordre de grandeur $\ell$) est comparable à celle de leur déplacement vertical 
+(d'ordre de grandeur $[z]$).
+
+Avec ces hypothèses le nombre de Froude est $Fr = 24$.
+
+Les variations de pression de nature hydrostatique sont dont négligeables devant celles de nature hydrodynamique.
+
+}
+
+
+%\item On introduit un point $S'$ situé sur la ligne de courant passant par $S$ et loin en amont du skieur. Donnez la pression $P_S'$ en ce point en fonction de son altitude $y_S'$ comptée a partir du niveau de la mer (attention $y_S'$ est négatif).
+
+%\rep{Dans le référentiel terrestre, la région loin en amont du skieur est au repos, dont un peut appliquer les lois de l'hydrostatique : $P_{S'} = P_{atm} - \rho g z_{S'}$.
+%Autre justification : dans le référentiel du skieur, la région située autour du point $S'$ est en écoulement uniforme (donc irrotationnel) à la vitesse $V_0$, donc on peut utiliser Bernoulli sous sa deuxième forme.}
+
+%\item 
+%Donnez la valeur de la pression en $S$ ( notée $P_S$) en fonction de $P_{atm}$, $\rho$ et $V_0$, $g$  et des altitudes $z_S$  et $z_S'$ des points $S$ et $S'$
+
+%\rep{On est dans les conditions d'application du thèorème de Bernoulli sur la ligne de courant $SS'$, on en déduit donc $P_{S'} + \rho g z_S' + \rho V_0^2/2 = P_S + \rho g z_S$.
+%Donc finalement :
+%$$P_s = P_{atm} + \rho V_0^2/2 - \rho g z_S$$}
+
+
+
+
+%\item En supposant $z_S$ et $z_S'$ sont tous deux de l'ordre de grandeur de $\ell$, montrez qu'on peut en fait négliger la gravité dans ce problème. Donnez une nouvelle approximation de  $P_S$ ne dépendant que de  $P_{atm}$, $\rho$ et $V_0$.
+
+%\rep{Si $z_s\approx \ell $, alors $\rho g z_S \approx 2000 U.S.I$ , alors que $\rho V_0^2/2 \approx 24 000 U.S.I$, ce terme est donc négligeable. Donc 
+%$$
+%P_s = P_{atm} + \rho V_0^2/2
+%$$
+%}
+
+%\item En supposant que l'ordre de grandeur de la pression sur la surface inférieure du ski est donné par $P \approx P_S$, donnez une estimation de l'ordre de grandeur de la force exercée (par l'eau et par l'air) sur le ski $| \vec{F}|$.
+
+%\item En supposant une vitesse d'ordre $V_0 \approx 25 km/h$, l'estimation précédente est-elle suffisante pour maintenir un skieur hors de l'eau ? Cette estimation vous semble-t-elle réaliste ?
+
+
+\subsubsection*{B. Estimation de la force par un bilan de quantité de mouvement}
+
+On souhaite maintenant calculer la force à l'aide d'un bilan de quantité de mouvement. 
+On note $\alpha$ l'angle d'incidence du ski et on introduit deux repères ($\vec{e}_x, \vec{e}_y$) et 
+($\vec{e}_X,\vec{e}_Y$) comme définis sur la figure.
+
+
+
+On considère un volume de contrôle $\Omega$ comme représenté sur la figure, délimité par un contour $\partial \Omega = (ABCDEFA)$ comme représenté sur la figure, d'épaisseur $\ell$ (dans la direction perpendiculaire $z$). 
+\begin{itemize}
+\item  les portions (BC) et (DE) sont des {\em lignes de courant}, 
+\item la portion (FA) est la surface du ski sur laquelle on souhaite calculer la force exercée.
+On suppose ici que la longueur $(FA)$ vaut $L$.
+\item la portion (AB) est une "section d'entrée" de dimension $S_0 = \ell h_0$ à travers laquelle la vitesse est supposée uniforme et
+de valeur $\vec{V}_0 = V_0 \vec{e}_x$.
+\item la portion (CD) est la section $S_1 = \ell h_1$ à travers laquelle s'effectue le "jet déferlant". On suppose également la vitesse uniforme dans cette section est donnée par $\vec{V}_1 = - V_1 \vec{e}_X$.
+\item la portion (EF) est la section "de sortie" $S_2 = \ell h_2$ de l'écoulement. Dans cette section on suppose la vitesse uniforme et donnée par $\vec{V}_2 = + V_2 \vec{e}_X$.
+\end{itemize}
+
+\item Justifiez que la pression sur les portions (AB), (BC), (CD), (DE), (EF) il est justifié de considérer que la pression est uniforme et égale à la pression atmosphérique $P_{atm}$ 
+(on pourra admettre ce résultat en ce qui concerne la portion (DE) ).
+
+\rep{
+\begin{itemize}
+\item  La portions (BC) est une {\em surface libre} en contact avec l'air à la pression atmosphérique,
+\item A travers la portion (CD), la pression augmente légèrement en fonction de la profondeur :
+$p_D = p_C + \rho g (z_b-z_c)$. Cependant l'incrément de pression hydrostatique est négligeable.
+\item Le point $F$ est sur une surface libre et donc à pression atmosphérique l'incrément de pression entre $F$ et $E$ est de nature hydrostatique vaut $\rho g (z_E-z_F)$ et est donc négligeable.
+\item Raisonnement a peu près identique pour la section (AB).
+\item Pour la portion (DE) il semble raisonnable de supposer que la norme de la vitesse reste a peu près constante , c.a.d  $|{\vec u} \approx V_0$, bien que la direction de la vitesse change.
+Sous cette hypothèse, Bernoulli nous indique que la pression est uniforme.
+\end{itemize}
+}
+
+%\rep{Sous la forme générale Bernoulli s'écrit $p+  \rho g z + \rho V^2/2 = cte$. Cependant les variations d'altitude sont toutes d'ordre $\ell$ et on a vu que le terme  $\rho g z $ est alors négligeable devant le terme $\rho V^2/2$.}
+
+
+
+
+
+\item Montrez que $V_1=V_0$ et $V_2 = V_0$. 
+
+\rep{On peut appliquer Bernoulli sur la ligne de courant CB. $p_B+  \rho V_0^2/2 = p_C+ \rho V_1^2/2$. $P_C = P_B = P_{atm}$, donc $V_1=V_0$. De même en raisonnant sur la ligne de courant  (DE). 
+}
+
+\item A l'aide d'un bilan de masse sur le volume de contrôle, donnez une relation entre 
+$h_0, h_1$ et $h_2$.
+
+\rep{Le bilan de masse s'écrit : 
+$- \int_{\partial \omega} \rho \vec{u} \cdot \vec{n} dS = 0$ où $\vec{n}$ est la normale sortante.
+
+Sur AB : $\vec{n} = -\vec{e}_x$ et $\vec{u} = V_0 \vec{e}_x$.
+Sur CD : $\vec{n} = -\vec{e}_X$ et $\vec{u} = -V_0 \vec{e}_x$.
+Sur EF : $\vec{n} = \vec{e}_X$ et $\vec{u} = V_0 \vec{e}_X$.
+
+Sur les autres portions le débit est nul. Seules les intégrales sur les portions AB, CD et EF du contour sont pertinentes, et on arrive à :
+$$ - \rho (h_1 \ell) V_1 + \rho (h_0  \ell) V_0 -\rho (h_2  \ell) V_2 = 0$$
+Compte tenu du fait que $V_1 = V_2 = V_0$ et en simplifiant par $\rho \ell$ on arrive à :
+$$
+h_0 = h_1+h_2
+$$
+}
+
+
+
+\item A l'aide du bilan de quantité de mouvement sur le volume de contrôle (théorème d'Euler), donnez une expression de la force $\vec{F}$ sous forme d'une intégrale sur le contour (ouvert) $(ABCDEF)$.
+
+\rep{
+Le théorème d'Euler s'écrit :
+$$
+\vec{F}_{eau->(FA)} = - \int_{(ABCDEF)} \left( p \vec{n} + \rho \vec{u} ( \vec{u} \cdot \vec{n} ) \right) dS
+$$
+}
+
+
+
+
+\item En projetant cette expression sous la forme 
+$\vec{F}  = F_X \vec{e_X} + F_Y \vec{e_Y} $, et en simplifiant les intégrales compte tenu des hypothèses formulées, montrez que :
+$$
+F_X = \rho \ell V_0 ( h_0 \cos \alpha + h_1 - h_2 )
+$$
+et donnez une expression similaire pour la composante $F_Y$ .
+
+\rep{En développant l'intégrale précédente :
+$$ 
+\vec{F} = - \int_{(AB)} \rho \vec{u} ( \vec{u} \cdot \vec{n} ) dS - \int_{(CD)} \rho V_0^2 \vec{e_x} dS  
+- \int_{(CD)} \rho V_0^2 \vec{e_x} dS
+- \int_{(ABCDEF)} \left( p_{atm} \vec{n}  \right) dS
+$$
+$$
+=
+\rho \ell h_0 V_0^2  \vec{e_x} - \rho \ell h_1 V_1^2  \vec{e_X} +  \rho \ell h_1 V_1^2  \vec{e_X} 
++ L \ell p_{atm} \vec{e}_Y   
+$$
+
+
+où le terme de pression a été simplifié en tenant compte de l'identité $\int_{\partial \Omega}  p_{atm} \vec{n}  dS = \vec{0}$, et donc 
+$
+- \int_{(ABCDEF)} \left( p_{atm} \vec{n}  \right) dS = + \int_{(FA)} \left( p_{atm} \vec{n}  \right) dS
+$ 
+avec $\vec{n} = \vec{e}_Y$.
+
+En projetant dans les axes :
+$F_X = \rho \ell V_0^2 (h_0 \cos \alpha + h_1 - h_2)$
+
+$F_Y = \rho \ell V_0^2 h_0 \sin \alpha  + L \ell p_{atm}$
+
+}
+
+
+\item Justifiez pourquoi la composante $F_X$ est nulle. En déduire que $h_1 = h_0 (1- \cos \alpha)/2$ et donnez une expression similaire pour $h_2$.
+
+\rep{
+Sous les hypothèses du régime inertiel, la force exercée sur la surface du ski est due uniquement à la pression (contrainte visqueuse négligée) et s'exerce donc uniquement dans la direction normale $\vec{e}_Y$.
+
+En combinant les équations $F_X = 0$ et $h_0 = h_1+h_2$ on arrive au résultat demandé.
+ 
+}
+
+\item Montrez que la composante selon $Y$ des forces exercées sur le ski par les fluides (eau+air) est :
+$$
+F_{Y,(eau+air)} = \rho \ell h_0 V_0 \sin \alpha  
+$$
+
+\rep{
+La composante de la force exercée par l'eau a été calculée ci-dessus. La force exercée par l'air vaut $\vec{F}_{(air)} = - L \ell p_{atm} \vec{e}_Y$. En ajoutant les deux on trouve le résultat demandé.
+}
+
+\item 
+On écrit maintenant la force sous la forme $\vec{F}  = F_y \vec{e_y} + F_y \vec{e_y} $. Exprimez la traînée $F_x$ et la portance $F_y$ en fonction des paramètres du problème.
+\rep{
+$F_x = \rho \ell h_0 V_0 \sin^2 \alpha ; \quad 
+F_y = \rho \ell h_0 V_0 \sin \alpha \cos \alpha =  \rho \ell h_0 V_0 / 2 \sin 2 \alpha$
+}
+
+\item Applications numériques : En supposant que $h_0 \approx \ell$  et $V_0 = 25 km/h$, donnez l'angle $\alpha$ générant une portance équilibrant le poids d'un skieur d'une masse de $80kg$.
+Que vaut alors la traînée $F_x$ .
+
+
+\end{enumerate}
+
+
+%\subsection{Vidange d'un réservoir}
+
+%{\em Exercice préparatoire ; énoncé et correction détaillée sur moodle}
+\comment{
 %--------------------------------------------------------------------------------------------------
 \subsection{Force exerc\'ee par un jet sur une plaque}
 %--------------------------------------------------------------------------------------------------
@@ -59,26 +355,7 @@ On supposera les effets visqueux n\'egligeables, ainsi que l'effet de la pesante
 \item 
   A quelles conditions les effets visqueux sont-ils effectivement n\'egligeables ?
 \end{enumerate}
-
-
-
-
-\subsection{Tube de pitot}
-
-
-\begin{figure}[htb]
-  \begin{center}
-      \includegraphics[width=.7\linewidth]{Pitot.pdf}
-      \end{center}
-      \vspace{-1cm}
-\end{figure}
-
-{\em Exercice complémentaire ; Correction disponible sur l'espace Moodle du cours de Mécanique des fluides de L2 (TD6, exercice 9)}.
-
-Pour mesurer la vitesse $U_0$ de vehicules se déplaçant à grande vitesse dans l'air (masse volumique de l’air $\rho_a = 1.225kg/m^3$ ),  on utilise généralement des sondes de Pitot. Dans le manomètre en U du tube de Pitot, on utilise un liquide de masse volumique connue, de l'eau par exemple ($\rho_e = 1000kg.m^3$). On prendra $g = 9.81 m/s^2$.
-
-La dénivellation indiquée dans le manomètre en U étant $h =10 cm$ , calculer la vitesse $U_0$.
-
+}
 
 
 
@@ -165,69 +442,6 @@ isovolume, stationnaire, et uniforme dans toute section du tunnel, sauf entre le
     justifi\'e ?
   \end{enumerate}
   
-\end{enumerate}
-
-
-
-\subsection{Estimation de la traînée d'un cylindre (Exam mai 2017)}
-
-
-On étudie l'écoulement stationnaire autour d'un cylindre fixe de rayon $a$ et de longueur infinie dans la direction $z$ (écoulement bidimensionnel dans le plan $(x,y)$ ). 
-Le fluide est considéré comme un liquide incompressible de masse volumique $\rho$ constante et de viscosité $\nu$. On néglige l'effet de la pesanteur.
-On cherche a estimer la force 
-${\bf F} = F_x {\bf e_x} + F_y {\bf e_y} $ exercée par le fluide sur le cylindre a partir de bilans intégraux.
-
-%Loin du cylindre, l'écoulement est supposé uniforme, de direction $\myvec{e}_x$ et de valeur %$U_0$, et la pression est également uniforme et vaut $P_0$.
-
-
-\begin{figure}[htb]
-  \begin{center}
-      \includegraphics[width=.9\linewidth]{Cylindre_Bilan.png}
-      \end{center}
-      \vspace{-1cm}
-\end{figure}
-
-%La modélisation potentielle des deux parties précédentes ne permet pas de prédire la force de traînée, qui est due aux frottements visqueux à la surface du cylindre. Dans cette partie
-%on cherche à estimer cette force de traînée par un bilan intégral dans le cas non tournant ($\Omega = 0$),  a partir de la loi de vitesse observée dans le sillage du cylindre à une distance $L$ de celui-ci.
-
-%On cherche à estimer la force de traînée par un bilan intégral,  
-%a partir de la loi de vitesse observée dans le sillage du cylindre à une distance $L$ de celui-ci.
- On considère pour cela un volume de contrôle correspondant à un domaine parallélépipédique 
- de largeur $2b$, longueur $2L$, et profondeur $2H$ (dans la direction z).  Les champ de vitesse ${\bf u} = u {\bf e_x} + v {\bf e_y} $  et de pression sur les frontières de ce volume de contrôle sont indiqués sur la figure. %Les lois $v(x,\pm b)$ et $u(L,y)$ sont 
- La troisième composante de vitesse $w$ est nulle sur toutes les frontières du domaine.
- On suppose que les effets visqueux sont négligeables loin du cylindre (y compris sur les frontières du volume de contrôle).
-
-\begin{enumerate}
-
-\item Ecrire un bilan de masse sur le volume de contrôle, et en déduire une relation intégrale reliant $U_0$, $u(L,y)$, $v(x,-b)$ et $v(x,b)$.
-(ici et dans la question suivante on ne cherchera pas à calculer les intégrales apparaissant dans l'expression).
-
-
-\item Ecrire un bilan de quantité de mouvement (théorème d'Euler) projeté dans la direction $x$, et en déduire une expression de la traînée (composante $F_x$ de la force exercée) sur le cylindre en fonction du champ de vitesse sur les frontières du domaine.
-
-
-%\item Ecrire également un bilan de masse, et en déduire une relation intégrale reliant $u(L,y)$, 
-%$v(x,-b)$ et $v(x,b)$.
-
-\item En combinant les équations obtenues aux deux questions précédentes, montrez que la force de traînée peut être estimée par l'équation suivante :
-$
-F_x = 2 H \int_{-b}^{b} u(L,y) \left( U_0 - u(L,y) \right) dy 
-$
-
-
-\item
-Application. On suppose qu'en sortie le profil de vitesse peut être approximé par la loi suivante: 
-$$
-u(L,y) = \left\{ \begin{array}{ll} U_0 \quad & |y|> a \\ 0.7 U_0 \quad & |y|< a \end{array}
-\right.
-$$
-
-En déduire le coefficient de traînée $C_x = F_x / (\rho U_0^2 a H)$.
-
-
-\item A partir d'un bilan de quantité de mouvement projeté dans la direction $y$, donnez une expression de la portance (composante $F_y$ de la force exercée) en fonction de la vitesse sur les frontières du domaine. A quelle condition cette portance est-elle nulle ? interprétez physiquement.
-
-
 \end{enumerate}
 
 
@@ -375,6 +589,27 @@ du syst\`eme embarqu\'e, quelle est la force induite par le jet d'eau sur
 le v\'ehicule d'intervention~? 
 \end{enumerate}
 }
+
+
+
+
+\subsection{Tube de pitot}
+
+
+\begin{figure}[htb]
+  \begin{center}
+      \includegraphics[width=.7\linewidth]{Pitot.pdf}
+      \end{center}
+      \vspace{-1cm}
+\end{figure}
+
+{\em Exercice complémentaire ; Correction disponible sur l'espace Moodle du cours de Mécanique des fluides de L2 (TD6, exercice 9)}.
+
+Pour mesurer la vitesse $U_0$ de vehicules se déplaçant à grande vitesse dans l'air (masse volumique de l’air $\rho_a = 1.225kg/m^3$ ),  on utilise généralement des sondes de Pitot. Dans le manomètre en U du tube de Pitot, on utilise un liquide de masse volumique connue, de l'eau par exemple ($\rho_e = 1000kg.m^3$). On prendra $g = 9.81 m/s^2$.
+
+La dénivellation indiquée dans le manomètre en U étant $h =10 cm$ , calculer la vitesse $U_0$.
+
+
 
 
 \comment{

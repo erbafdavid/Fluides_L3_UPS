@@ -58,6 +58,40 @@ david.fabre@imft.fr
 %\part{Présentation du cours}
 %==================================================================================================
 
+%--------------------------------------------------------------------------------------------------
+\begin{frame}{Objectifs du cours}
+%--------------------------------------------------------------------------------------------------
+
+\small
+
+\begin{itemize}
+\item[\checkmark]
+	Savoir analyser, décrire et caractériser les écoulements 
+\item[\checkmark]
+	Connaître les phénomènes physiques de base impliqués dans les écoulements
+\item[\checkmark]
+	Maîtriser la modélisation de ces mécanismes et leur mise en équation : 
+\item[] $\rightarrow$ Equation de Navier-Stokes
+\item[\checkmark]
+	Savoir identifier les mécanismes dominants et ceux qui sont négligeables
+\item[]
+	$\rightarrow$ définition et exploitation des nombres sans dimension.
+\item[\checkmark]
+	Savoir simplifier les modèles en conséquence
+\item[\checkmark]
+	Connaitre les principales techniques de résolution mathématique de ces problèmes
+\item[]
+	$\rightarrow$ Méthodes locales (résolution exacte de l'équations de NS dans des cas simples) et intégrales (utilisation d'équations-bilan). 
+\end{itemize}
+
+\bigskip
+
+\hfill Remarque : liste non exhaustive\ldots
+
+\vspace{20mm}
+
+\end{frame}
+
 
 
 
@@ -67,16 +101,20 @@ david.fabre@imft.fr
 
 \small
 
+
 \textbf{Format :} \medskip
 
 \begin{itemize}
 \item[\checkmark]
-	24h Cours + 24h TD + 9h TP expérimentaux + 3h TP numériques
+	12 Cours (12x2h) + 12 TD (12x2h) + 3 TPs expérimentaux (3x3h) + 1 TP numérique (3h).
 \item[\checkmark]
-	Structuration du cours : 1 chapitre = 1 thème par semaine (2h) 
+	Structuration du cours : 1 chapitre = 1 thème par semaine 
 	\mytabbing{Structuration du cours :} avec 1 séance de TD associé (2h, la semaine d'après).
+	\mytabbing{Structuration du cours :} (NB :  2 cours la première semaine !)
+	
 \item[\checkmark]
 	Entre cours et TD : \textcolor{rouge}{exercice complémentaire} sur Moodle (travail personnel)
+	\mytabbing{Entre cours et TD : } Questionnaire Pédagogique Hebdomadaire (sur moodle)
 \item[\checkmark]
 	TP expérimentaux et numériques : obligatoires, cf. informations sur le tableau d'affichage
 \end{itemize}
@@ -90,11 +128,11 @@ david.fabre@imft.fr
 \item
 	Cours : David FABRE (david.fabre@imft.fr)
 \item
-	TD : Mokhtar ZAGZOULE
+	TD : Mokhtar ZAGZOULE, Frédéric MOULIN
 \item
 	TP expérimentaux : Frédéric MOULIN
 \item
-	TP numériques : David Fabre
+	TP numériques : David FABRE
 	
 \item ( Enseignants précédents : P. BRANCHER, P. LAURENS, S. SAINTLOS, F. CHARRU... )	
 \end{itemize}
@@ -106,7 +144,7 @@ david.fabre@imft.fr
 
 \begin{enumerate}
 \item
-	Première session : TP (20\%), examen partiel (30\%), examen terminal 1 (50\%)
+	Première session : TP 25\% (num 10\%, expé 15 \%), CC 30\% (exam partiel 2h 25\% + QPH 5\%), CT 45 \% (exam final 3h)  
 \item 
 	Seconde session : report de la note de TP (20\%), examen terminal 2 (80\%)
 \end{enumerate}
@@ -114,40 +152,7 @@ david.fabre@imft.fr
 \vspace{5mm}
 
 \end{frame}
-}
 
-%--------------------------------------------------------------------------------------------------
-\begin{frame}{Objectifs du cours}
-%--------------------------------------------------------------------------------------------------
-
-\small
-
-\begin{itemize}
-\item[\checkmark]
-	Savoir analyser, décrire et caractériser les écoulements 
-\item[\checkmark]
-	Connaître les phénomènes physiques de base impliqués dans les écoulements
-\item[\checkmark]
-	Maîtriser la modélisation de ces mécanismes et leur mise en équation
-\item[\checkmark]
-	Savoir identifier les mécanismes dominants et ceux qui sont négligeables
-\item[]
-	$\rightarrow$ définition et exploitation des nombres sans dimension.
-\item[\checkmark]
-	Savoir simplifier les modèles en conséquence
-\item[\checkmark]
-	Maîtriser les techniques de résolution des équations régissant les écoulements 
-\item[]
-	$\rightarrow$ formulation complexe, analyse asymptotique, recherche de solutions auto-similaires, etc.
-\end{itemize}
-
-\bigskip
-
-\hfill Remarque : liste non exhaustive\ldots
-
-\vspace{20mm}
-
-\end{frame}
 
 
 %--------------------------------------------------------------------------------------------------
@@ -177,8 +182,9 @@ Entre le cours et le TD : \hfill (NB : pas de rappel de cours en TD\ldots)
 \begin{enumerate}
 \item relire le cours, 
 \item refaire les démonstrations,
-\item faire les exercices posés en cours,
+\item refaire les exercices traités en cours,
 \item travailler l'exercice complémentaire de la semaine.
+\item répondre au questionnaire pédagogique hebdomadaire sur moodle !
 \end{enumerate}
 
 \vspace{5mm}
@@ -204,15 +210,15 @@ Quelques informations disponibles sur le tableau d'affichage du L3
 
 \medskip
 
-Plus d'informations sur la page Moodle du cours : \quad \texttt{\color{rouge} http://moodle.ups-tlse} 
+Plus d'informations sur la page Moodle du cours : %\quad \texttt{\color{rouge} http://moodle.ups-tlse} 
+{\tiny \url https://moodle.univ-tlse3.fr/course/view.php?id=1025}
 
-\medskip
+%\medskip
 
-\qquad $\rightarrow$ puis taper dans \texttt{Recherche} : mécanique des fluides
+%\qquad $\rightarrow$ puis taper dans \texttt{Recherche} : mécanique des fluides
 
-\medskip
+%\medskip
 
-Clef d'accès : \texttt{\color{rouge} Reynolds}
 
 \pause
 
@@ -222,23 +228,23 @@ Plusieurs documents pédagogiques ou administratifs mis en ligne :
 
 \begin{itemize}
 \item
-	Syllabus du cours
-\item
-	Calendrier et protocole des examens
-\item
 	Résumés de cours
 \item
-	Compléments de cours
+	Compléments de cours (Formulaire,...)
 \item
 	Enoncés de TD
 \item
 	\textcolor{rouge}{Exercices complémentaires} (énoncés et corrigés)
 \item
+	\textcolor{rouge}{Questionnaire Pédagogique Hebdomadaire}
+\item
 	Enoncés et corrections d'autres exercices et problèmes 
 \item
 	Programmes informatiques
-\item
- 	 $[\ldots]$
+\item 
+	Examens et corrigés 
+\item 
+	$[\ldots]$
 \end{itemize}
 
 \vspace{5mm}
@@ -260,10 +266,24 @@ Plusieurs documents pédagogiques ou administratifs mis en ligne :
 	Cours de Thermodynamique du premier semestre
 \item
 	Notions de mécanique du point, des solides rigides et des systèmes.
+
+	
+	
 \item
 	Outils mathématiques : analyse, algèbre linéaire, géométrie différentielle, 
 	\mytabbing{Outils mathématiques :} équations différentielles, intégrales multiples, \ldots
+	
+	\item 	
+	Premières notions de mécanique des fluides ; Cours L2 (M. Marcoux).
+	
+	Nombreux documents sur moodle :  
+	
+	{\tiny \url{https://moodle.univ-tlse3.fr/course/view.php?id=1797}}
+
+	
 \end{itemize}
+
+
 
 \pause
 
@@ -286,18 +306,25 @@ Plusieurs documents pédagogiques ou administratifs mis en ligne :
 \item[] \hspace{-5mm}
 	Guyon, Hulin \& Petit : \textsl{Hydrodynamique physique}.
 		CNRS éditions, 2001.
-\item[] \hspace{-5mm}
-	Guyon, Hulin \& Petit : 
-		\textsl{Ce que disent les fluides}.	Belin, 2005. 
+%\item[] \hspace{-5mm}
+%	Guyon, Hulin \& Petit : 
+%		\textsl{Ce que disent les fluides}.	Belin, 2005. 
 \item[] \hspace{-5mm}
 	Chassaing : \textsl{Mécanique des fluides : éléments d'un premier parcours}.
 		Editions Cépaduès, 2000.
 \item[] \hspace{-5mm}
-	Ryhming : \textsl{Dynamique des fluides}.
-		Presses Polytechniques et Universitaires Romandes, 2004.
+	Candel : \textsl{Mécanique des fluides}. 
+		Dunod, 2005 (3e édition).
 \item[] \hspace{-5mm}
-	Acheson : \textsl{Elementary Fluid Dynamics}. 
-		Oxford University Press, 1990.
+	Darrozès \& François : \textsl{ Mécanique des fluides}.
+		Editions de l'ENSTA, 1998.		
+		
+%\item[] \hspace{-5mm}
+%	Ryhming : \textsl{Dynamique des fluides}.
+%		Presses Polytechniques et Universitaires Romandes, 2004.
+%\item[] \hspace{-5mm}
+%	Acheson : \textsl{Elementary Fluid Dynamics}. 
+%		Oxford University Press, 1990.
 \end{itemize}
 
 \end{frame}
@@ -312,13 +339,13 @@ Plusieurs documents pédagogiques ou administratifs mis en ligne :
 \item
   Introduction -- Analyse dimensionnelle
 \item
-  Forces dans les fluides au repos
+  Hydrostatique -- Forces dans les fluides au repos
+  \item
+  Cinématique -- Description du mouvement d'un fluide.
 \item 
-  Forces dans les fluides en mouvement
+  Viscosité -- Forces dans les fluides en mouvement
 \item
-  Cinématique des écoulements
-\item
-  Equations de bilan
+  Equations de la mécanique des fluides -- régimes d'écoulement
 \item
   Ecoulements visqueux
 \smallskip

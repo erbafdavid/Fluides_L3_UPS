@@ -4,18 +4,18 @@
 
 \section{Propriétés physiques des fluides les plus courants}
 
-(Valeurs de référence pour $T = 20^o C$ ; $P = 10^5 Pa = 1 atm$) 
-
+\subsection{Valeurs de référence  pour l'eau et l'air}
 \vspace{.5cm}
+(pour  $T = 20^o C$ ; $P = 10^5 Pa = 1 atm$)
 
 \begin{tabular}{|l|l|l|l|} 
 \hline
 					& Air 							& Eau pure 						& Eau de mer \\
 \hline
-Masse volumique & 		$\rho = 1.205 kg/m^3$				& $1000 kg/m^3$					&  $1027 kg/m^3$ \\
- Viscosité cin. & 		$\nu = 1.5e-6 m^2/s$ 				& $\nu = 1.188 \cdot 10^{-6} m /s^2$		&  $\nu = 1.139 10^{-6} m /s^2$ \\
- Viscosité dyn. & 		$\mu = 1.81 \cdot 10^{-5} Pa \cdot s$ 	& $\mu = 1.188\cdot  10^{-3} Pa \cdot s$ 	& \\
- compressibilité & 		$\chi_s = 1.4 atm^{-1}$ 				&$\chi_s =  4.9 \cdot 10^{-5} Atm^{-1}  	& \\
+Masse volumique & 		$\rho = 1.205 kg/m^3$				& $997,05 kg/m^3$					&  $1027 kg/m^3$ \\
+ Viscosité cin. & 		$\nu = 1.5e-6 m^2/s$ 				& {\color{red} $\nu = 1.002 \cdot 10^{-6} m /s^2 $ }		&  $\nu = 1.139 10^{-6} m /s^2$ \\
+ Viscosité dyn. & 		$\mu = 1.81 \cdot 10^{-5} Pa \cdot s$ 	&  {\color{red}  $\mu = 0.999 \cdot  10^{-3} Pa \cdot s$ } 	& \\
+ compressibilité & 		$\chi_s = 1.4 atm^{-1}$ 				&$\chi_s =  4.9 \cdot 10^{-5} Atm^{-1}$  	& \\
  dilatabilité & 			$ \alpha = 3.4 \cdot 10{-3} K^{-1}$  		& $ \alpha = 1.5 \cdot 10{-4} K^{-1}$  	& \\
  vitesse du son &		$ c = 334 m/s$ 						& $c = 1500 m/s$ 					& \\  
  \hline
@@ -27,13 +27,25 @@ Masse volumique & 		$\rho = 1.205 kg/m^3$				& $1000 kg/m^3$					&  $1027 kg/m^3
 
 
 
-\subsubsection{ANNEXE : Equation d'état de l'eau de mer (IES80)}
+\subsection{Equation d'état et loi d'état énergétique de l'air}
+
+$ P = \rho r T ; \qquad  c = \sqrt{\gamma r T}.$
+
+$e = c_v T ; \qquad h = c_p T  ; \qquad c_v = \frac{r}{\gamma-1} ; \qquad  c_p = \frac{\gamma r}{\gamma-1}$
+
+$ r = 287 J/K/kg ; \qquad \gamma = 1.405$.
+
+
+\subsection{Equation d'état de l'eau de mer (IES80)}
 
 La relation d'état IES80 permet  de calculer $\rho$ ($kg /m^3$) en fonction
 de $T$ (température en  en $^o C$), $S$ (salinité en $g/kg$), et $P$ (pression en $Bars$). 
 
 Elle est précise (en toute rigueur) pour $-2^oC<T < 40^o C$, $0<S<40g/kg$, 
 $0<P<1500 Bars$.
+
+\vspace{.5cm}
+
 {
 \tiny
 
@@ -64,6 +76,35 @@ K(T,S,P) &=& 19652.21+148.4206 \times T-2.327105 \times T^2+1.360447\cdot 10^{-2
 \end{eqnarray*}
 
 }
+
+
+{\color{red} 
+\subsection{Viscosité de l'eau pure en fonction de la température}
+
+\paragraph{Cas de l'air} :
+
+Loi (expérimentale) de Sutherland : 
+$$
+\mu = \mu_0 \left( \frac{T}{T_0} \right)^{3/2} \frac{ T_0 + S }{T+S} 
+$$
+avec les paramètres :
+$$
+\mu_0 = 	1.716 \times 10^{-5} P.s,  \quad T_0 = 273.15 K , \quad S = 110.4 K
+$$
+
+\paragraph{Cas de l'eau pure} :
+
+Loi (expérimentale)  de Vogel :
+
+$$
+\mu(T)  = \mu_0 e^{\frac{B}{T-C}}
+$$
+avec les paramètres : 
+$$ 
+\mu_0 = 0.0243 Pa\cdot s, \quad B = 578.919 K, \quad C = 137.54 K
+$$
+ }
+
 
 
 \begin{landscape}
@@ -204,7 +245,7 @@ Il existe de nombreuses variantes de ces équations-bilan, on liste ici les plus
 \qquad  
 		\rho \ddt{\vec{u}} 
 		= 
-		\rho \vec{f}  - \gradient p + \mu \Delta \vec{u} + \frac{\mu}{3} \gradient \divergence \vec{u} 
+		\rho \vec{g}  - \gradient p + \mu \Delta \vec{u} + \frac{\mu}{3} \gradient \divergence \vec{u} 
 		%\label{eq:bilan_local_lagrangien_qdm}
 \end{equation}
 	
@@ -217,7 +258,7 @@ Il existe de nombreuses variantes de ces équations-bilan, on liste ici les plus
 \mbox{\bf Forme locale 2 (conservative) :}
 \qquad  
 	 \dpa{(\rho \vec{u})}{t} + \divergence (\rho \vec{u} \otimes \vec{u})
-		= \rho \vec{f}  - \gradient p + \divergence \mytensor{\tau}
+		= \rho \vec{g}  - \gradient p + \divergence \mytensor{\tau}
 		%\label{eq:bilan_local_lagrangien_qdm}
 \end{equation}
 
@@ -227,12 +268,12 @@ Il existe de nombreuses variantes de ces équations-bilan, on liste ici les plus
 		=
 		- \oint_{\partial \Omega} \rho \, \vec{u}\; (\vec{u}\cdot \vec{n}) \, dS
 		+ \oint_{\partial \Omega} \left( -p \vec{n} + \mytensor{\tau} \cdot \vec{n}\right) \; dS
-		+ \int_{\Omega} \rho \vec{f} \, dV 
-		\left[ + \oint_{\cal L} \gamma \vec{t}  \, d\ell \right]
+		+ \int_{\Omega} \rho \vec{g} \, dV 
+		\quad { \left[ + \oint_{\cal L} \gamma \vec{n}_{\cal L}  \, d\ell \right]}
 		\label{eq:bilan_global_eulerien_qdm}
 	\end{equation}
 	
-{\small (Le dernier terme entre crochets est à prendre en compte si le volume de contrôle $\Omega$ est traversé par une {\em surface libre} ${\cal S}$ ; dans ce cas  $ {\cal L} = {\partial \Omega} \cap \cal S$ et $\vec t$ est le vecteur unitaire contenu dans le plan ${\cal S}$ et perpendiculaire à ${\cal L}$)}
+{\small (Le dernier terme entre crochets est à prendre en compte si le volume de contrôle $\Omega$ est traversé par une {\em surface libre} ${\cal S}$ ; dans ce cas  $ {\cal L} = {\partial \Omega} \cap \cal S$ et $\vec{n}_{\cal L} $ est le vecteur unitaire contenu dans le plan ${\cal S}$ et perpendiculaire à ${\cal L}$)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Bilan d'énergie cinétique}
@@ -242,7 +283,7 @@ Il existe de nombreuses variantes de ces équations-bilan, on liste ici les plus
 \begin{equation}
 		\rho \ddt{} \frac{ |\vec{u}|^2}{2} 
 		= 
-		- \rho \vec{f} \cdot \vec{u}  - \gradient p \cdot {\vec u} + \vec{u} \cdot \divergence ( \mytensor{\tau} )
+		- \rho \vec{g} \cdot \vec{u}  - \gradient p \cdot {\vec u} + \vec{u} \cdot \divergence ( \mytensor{\tau} )
 		%\label{eq:bilan_local_lagrangien_qdm}
 \end{equation}
 
@@ -252,8 +293,8 @@ $\,$
 Sous les hypothèses suivantes :
 \begin{itemize}
 \item 
-Le champ de force massique $\vec f$ est conservatif, c.a.d. 
-$\vec f = -\gradient {\cal U}$ (en général ${\cal U}= g z$),
+Le champ de force massique $\vec g$ est conservatif, c.a.d. 
+$\vec g = -\gradient {\cal U}$ (en général ${\cal U}= g z$),
 \item  Le fluide est barotrope (c.a.d. $p=p(\rho)$)\footnote{Cette notion englobe fluide incompressible pour lequel ${\cal P} = p/ \rho$  ainsi que le gaz parfait en évolution isotherme ou isentropique};
 
 Dans ce cas on peut définir la  fonction 
@@ -295,8 +336,8 @@ Dans ce paragraphe $e$ est l'énergie interne {\em massique}\footnote{ $e = c_v 
 		}_{\ddt{E} }		 
 		= \underbrace{  - \oint_{\partial \Omega}  \rho \left( e + \frac{ |\vec{u}|^2}{2} \right) \vec{u} \cdot \vec{n} \; dS
 		}_{\dot{E}^{(ech)}}
-		+ \underbrace{\int_{\Omega} \rho \vec{f} \cdot \vec{u} \; dV
-		}_{\dot{W}^{(f)}} 
+		+ \underbrace{\int_{\Omega} \rho \vec{g} \cdot \vec{u} \; dV
+		}_{\dot{W}^{(g)}} 
 		+ \underbrace{ \oint_{\partial \Omega} -p \vec{u} \cdot  \vec{n}   \; dS 
 		}_{\dot{W}^{(p)}} 
 		+ \underbrace{ \oint_{\partial \Omega} \vec{u} \cdot  \mytensor{\tau} \cdot \vec{n}  \; dS 
@@ -325,7 +366,7 @@ Dans ce paragraphe $e$ est l'énergie interne {\em massique}\footnote{ $e = c_v 
 Remarque : si le volume de contrôle ${\Omega}$ contient une surface intérieure ${\partial \Omega}_i$ mobile,
 il convient d'ajouter
 $$
-W^{(utile)} = \int_{{\partial \Omega}_i}  \vec{u} \cdot \left( -p \vec{n}  \cdot  \mytensor{\tau} \cdot \vec{n} \right)  \; dS
+\dot{W}^{(utile)} = \int_{{\partial \Omega}_i}  \vec{u} \cdot \left( -p \vec{n}  \cdot  \mytensor{\tau} \cdot \vec{n} \right)  \; dS
 $$ 
 
 
@@ -343,7 +384,7 @@ $$
 \begin{equation}
 \mbox{\bf Forme locale 1 :} \qquad 
 		\rho \ddt{} \left( e+ \frac{|\vec{u}|^2}{2} \right) 
-		= -\rho \vec{f} \cdot \vec{u} 
+		= -\rho \vec{g} \cdot \vec{u} 
 		- \gradient ( p) \cdot  \vec{u}  
 		+ \divergence ( \mytensor{\tau}) \cdot \vec{u}  
 		 - \divergence(\vec{q})
@@ -431,7 +472,7 @@ S'obtient a partir du bilan d'energie interne en posant $de = Tds - p d (1/\rho)
 
 
 %--------------------------------------------------------------------------------------------------
-\section{Opérateurs différentiels et équations de Navier-Stokes incompressibles dans les principaux systèmes de coordonnée}
+\section{Opérateurs différentiels et équations de Navier-Stokes incompressibles dans les principaux systèmes de coordonnées}
 %--------------------------------------------------------------------------------------------------
 
 
@@ -503,15 +544,15 @@ $$
 
 \begin{eqnarray*}
 \dpa{u_x}{t} + u_x \dpa{u_x}{x} + u_y \dpa{u_x}{y} + u_z \dpa{u_x}{z} & = &
-\frac{1}{\rho} f_x - \frac{1}{\rho} \dpa{p}{x}
+\frac{1}{\rho} g_x - \frac{1}{\rho} \dpa{p}{x}
 + \nu \left ( \ddpa{u_x}{x} + \ddpa{u_x}{y} + \ddpa{u_x}{z} \right )
 \\ & & \\
 \dpa{u_y}{t} + u_x \dpa{u_y}{x} + u_y \dpa{u_y}{y} + u_z \dpa{u_y}{z} & = &
-\frac{1}{\rho} f_y - \frac{1}{\rho} \dpa{p}{y}
+\frac{1}{\rho} g_y - \frac{1}{\rho} \dpa{p}{y}
 + \nu \left ( \ddpa{u_y}{x} + \ddpa{u_y}{y} + \ddpa{u_y}{z} \right )
 \\ & & \\
 \dpa{u_z}{t} + u_x \dpa{u_z}{x} + u_y \dpa{u_z}{y} + u_z \dpa{u_z}{z} & = &
-\frac{1}{\rho} f_z - \frac{1}{\rho} \dpa{p}{z}
+\frac{1}{\rho} g_z - \frac{1}{\rho} \dpa{p}{z}
 + \nu \left ( \ddpa{u_z}{x} + \ddpa{u_z}{y} + \ddpa{u_z}{z} \right )
 \end{eqnarray*}
 
@@ -616,19 +657,19 @@ $$
 
 \begin{eqnarray*}
 \dpa{u_r}{t} + u_r \dpa{u_r}{r} + \frac{u_{\theta}}{r} \dpa{u_r}{\theta} + u_z \dpa{u_r}{z} - \frac{u_{\theta}^2}{r} & = &
-\frac{1}{\rho} f_r - \frac{1}{\rho} \dpa{p}{r} \\
+\frac{1}{\rho} g_r - \frac{1}{\rho} \dpa{p}{r} \\
 & + & \nu \left[ \frac{1}{r} \dpa{}{r} \left( r \dpa{u_r}{r} \right) + 
              \frac{1}{r^2} \ddpa{u_r}{\theta} + \ddpa{u_r}{z} -
              \frac{u_r}{r^2} - \frac{2}{r^2} \dpa{u_{\theta}}{\theta} \right] \\
 \\
 \dpa{u_{\theta}}{t} + u_r \dpa{u_{\theta}}{r} + \frac{u_{\theta}}{r} \dpa{u_{\theta}}{\theta} + u_z \dpa{u_{\theta}}{z} + \frac{u_r u_{\theta}}{r} & = &
-\frac{1}{\rho} f_{\theta} - \frac{1}{\rho r} \dpa{p}{\theta} \\
+\frac{1}{\rho} g_{\theta} - \frac{1}{\rho r} \dpa{p}{\theta} \\
 & + & \nu \left[ \frac{1}{r} \dpa{}{r} \left( r \dpa{u_{\theta}}{r} \right) + 
              \frac{1}{r^2} \ddpa{u_{\theta}}{\theta} + \ddpa{u_{\theta}}{z} -
              \frac{u_{\theta}}{r^2} + \frac{2}{r^2} \dpa{u_r}{\theta} \right] \\
 \\
 \dpa{u_z}{t} + u_r \dpa{u_z}{r} + \frac{u_{\theta}}{r} \dpa{u_z}{\theta} + u_z \dpa{u_z}{z} & = &
-\frac{1}{\rho} f_z - \frac{1}{\rho} \dpa{p}{z} \\
+\frac{1}{\rho} g_z - \frac{1}{\rho} \dpa{p}{z} \\
 & + & \nu \left[ \frac{1}{r} \dpa{}{r} \left( r \dpa{u_z}{r} \right) + 
              \frac{1}{r^2} \ddpa{u_z}{\theta} + \ddpa{u_z}{z} \right]
 \end{eqnarray*}
@@ -674,14 +715,58 @@ $$
 
 \clearpage
 
-\subsection{Coordonnées sphériques $(R,\Theta,\phi)$}
+\subsection{Coordonnées sphériques $(R,\Theta,\phi)$ (ou $(r,\theta,\varphi)$ si pas d'ambigüité) }
 
-\paragraph{Ecoulement incompressible}
+\paragraph{Opérateurs différentiels}
 
-$$\divergence(\vec{u})=\frac{\partial u_r}{\partial r} + 2 \frac{u_r}{r} + \frac{1}{r} \frac{\partial u_\theta}{\partial \theta} + \frac{1}{r \sin \theta} \frac{\partial u_\varphi}{\partial \varphi} + \frac{1}{\tan \theta} \frac{u_\theta}{r} 
+$$
+\divergence(\vec{u})=\frac{\partial u_r}{\partial r} + 2 \frac{u_r}{r} + \frac{1}{r} \frac{\partial u_\theta}{\partial \theta} + \frac{1}{r \sin \theta} \frac{\partial u_\varphi}{\partial \varphi} + \frac{1}{\tan \theta} \frac{u_\theta}{r} 
 $$
 
-\paragraph{Equation de Navier-Stokes :}
+$$\Delta f=div \left( \vec{\nabla} f \right)=\frac{\partial^2 f}{\partial r^2} + \frac{2}{r} \frac{\partial f}{\partial r} + \frac{1}{r^2} \frac{\partial^2 f}{\partial \theta^2} + \frac{1}{r^2 \tan \theta} \frac{\partial f}{\partial \theta} + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2 f}{\partial \varphi^2} $$
+%\noindent où on notera que $$\frac{\partial^2 f}{\partial r^2} + \frac{2}{r} \frac{\partial f}{\partial r}=\frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial f}{\partial r} \right) $$
+
+
+$$ 
+\rot \vec{u} =  \left\{ 
+\begin{array}{l} 
+\displaystyle \omega_r = \left(\frac{1}{r \sin \theta}\frac{\partial}{\partial \theta} \left( \mathrm{u}_\varphi \sin \theta \right) - \frac{\partial \mathrm{u}_\theta}{\partial \varphi}\right) \\ \\
+\displaystyle \omega_\theta = \frac{1}{r \sin \theta} \frac{\partial \mathrm{u}_r}{\partial \varphi} - \frac{1}{r} \frac{\partial}{\partial r}\left( r  \mathrm{u}_\varphi \right) 
+\\ \\
+\displaystyle \omega_\varphi = \frac{1}{r}\left(\frac{\partial}{\partial r}(r \mathrm{u}_\theta) - \frac{\partial \mathrm{u}_r}{\partial \theta}\right)\\
+\end{array}
+\right.
+\qquad 
+\gradient f =  \left\{ 
+\begin{array}{l} 
+\displaystyle \frac{\partial f}{\partial r} 
+ \\ \\
+\displaystyle \frac{1}{r} \frac{\partial f}{\partial \theta} 
+\\ \\
+\displaystyle \frac{1}{r \sin \theta} \frac{\partial f}{\partial \varphi }\\
+\end{array}
+\right.
+$$
+
+
+
+
+\paragraph{Gradient des vitesses et tenseur des contraintes}
+
+
+$$
+\vec{grad} \left( \vec{u} \right) = \vec{\nabla} \left( \vec{u} \right) =\mytensor{\nabla u}=
+\begin{bmatrix}
+\frac{\partial u_r}{\partial r} & \frac{1}{r} \left( \frac{\partial u_r}{\partial \theta} - u_\theta \right) & \frac{1}{r} \left( \frac{1}{\sin \theta} \frac{\partial u_r}{\partial \varphi} - u_\varphi \right) \\
+\frac{\partial u_\theta}{\partial r} & \frac{1}{r} \left( \frac{\partial u_\theta}{\partial \theta} + u_r \right) & \frac{1}{r} \left( \frac{1}{\sin \theta} \frac{\partial u_\theta}{\partial \varphi} - \frac{1}{\tan \theta} u_\varphi \right) \\
+\frac{\partial u_\varphi}{\partial r} & \frac{1}{r} \frac{\partial u_\varphi}{\partial \theta} &  \frac{1}{r} \left( \frac{1}{\sin \theta} \frac{\partial u_\varphi}{\partial \varphi} + \frac{1}{\tan \theta} u_\theta + u_r \right)
+\end{bmatrix}
+$$
+\noindent d'où on peut tirer le tenseur des taux de déformation par symétrisation : $\mytensor{D}=\frac{1}{2} \left( \mytensor{\nabla u} + \mytensor{\nabla u}^T \right)$, ainsi que le tenseur des contraintes visqueuses : $\mytensor{\tau} = 2 \mu \mytensor{D}$
+
+
+
+\paragraph{Equation de Navier-Stokes (écoulement incompressible):}
 
 
 
@@ -694,7 +779,7 @@ $$
 	- u_{\theta}^2 - u_{\varphi}^2
 	\right] 
 & = &
-\frac{1}{\rho} f_r - \frac{1}{\rho} \dpa{p}{r} +  \nu \Delta_r \vec{u};
+\frac{1}{\rho} g_r - \frac{1}{\rho} \dpa{p}{r} +  \nu \Delta_r \vec{u};
 \\
 \dpa{u_{\theta}}{t} 
 + u_r \dpa{u_{\theta}}{r} 
@@ -705,7 +790,7 @@ $$
 		+ u_\varphi \dpa{u_{\theta}}{\varphi} + \frac{u_r u_{\theta}}{r}
 		\right] 
 & = &
-\frac{1}{\rho} f_{\theta} - \frac{1}{\rho r} \dpa{p}{\theta} 
+\frac{1}{\rho} g_{\theta} - \frac{1}{\rho r} \dpa{p}{\theta} 
  +  \nu \Delta_\theta \vec{u}; 
  \\
 \dpa{u_\varphi}{t} + u_r \dpa{u_\varphi\varphi}{r} 
@@ -715,7 +800,7 @@ $$
 	+ u_\theta u_r - \frac{u_\theta u_\varphi}{tan \theta} 
 		\right] 
 &=&
-\frac{1}{\rho} f_\varphi - \frac{1}{\rho r \sin \theta} \dpa{p}{\varphi} + \nu \Delta_\varphi \vec{u}
+\frac{1}{\rho} g_\varphi - \frac{1}{\rho r \sin \theta} \dpa{p}{\varphi} + \nu \Delta_\varphi \vec{u}
 \end{eqnarray*}
 
 
@@ -746,27 +831,9 @@ $$
 				\right]
 \end{eqnarray*}
 
-Où le laplacien scalaire est :
-$$\Delta f=div \left( \vec{\nabla} f \right)=\frac{\partial^2 f}{\partial r^2} + \frac{2}{r} \frac{\partial f}{\partial r} + \frac{1}{r^2} \frac{\partial^2 f}{\partial \theta^2} + \frac{1}{r^2 \tan \theta} \frac{\partial f}{\partial \theta} + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2 f}{\partial \varphi^2} $$
-\noindent où on notera que $$\frac{\partial^2 f}{\partial r^2} + \frac{2}{r} \frac{\partial f}{\partial r}=\frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial f}{\partial r} \right) $$
 
 
-
-\paragraph{Gradient des vitesses et tenseur des contraintes}
-
-
-$$
-\vec{grad} \left( \vec{v} \right) = \vec{\nabla} \left( \vec{v} \right) =\overline{\overline{\nabla v}}=
-\begin{bmatrix}
-\frac{\partial v_r}{\partial r} & \frac{1}{r} \left( \frac{\partial v_r}{\partial \theta} - v_\theta \right) & \frac{1}{r} \left( \frac{1}{\sin \theta} \frac{\partial v_r}{\partial \varphi} - v_\varphi \right) \\
-\frac{\partial v_\theta}{\partial r} & \frac{1}{r} \left( \frac{\partial v_\theta}{\partial \theta} + v_r \right) & \frac{1}{r} \left( \frac{1}{\sin \theta} \frac{\partial v_\theta}{\partial \varphi} - \frac{1}{\tan \theta} v_\varphi \right) \\
-\frac{\partial v_\varphi}{\partial r} & \frac{1}{r} \frac{\partial v_\varphi}{\partial \theta} &  \frac{1}{r} \left( \frac{1}{\sin \theta} \frac{\partial v_\varphi}{\partial \varphi} + \frac{1}{\tan \theta} v_\theta + v_r \right)
-\end{bmatrix}
-$$
-\noindent d'où on peut tirer le tenseur des taux de déformation par symétrisation : $\overline{\overline{d}}=\frac{1}{2} \left( \overline{\overline{\nabla v}} + \overline{\overline{\nabla v}}^T \right)$, ainsi que la vorticité en prenant la partie antisymétrique.
-
-
-\paragraph{Fonction de Stokes $\Psi$}  pour un écoulement à symétrie de révolution
+\paragraph{Fonction de Stokes $\Psi$}  pour un écoulement à symétrie de révolution décrit en coordonnées sphériques
 
 ($\vec{u} = u_R(R,\Theta) \vec{e_R} + u_\Theta(R,\Theta) \vec{e_\Theta}$)
 
@@ -776,8 +843,8 @@ $$
 %\quad \mbox{ c.a.d :} \quad \quad 
 \left\{
 \begin{array}{ccc}
-\displaystyle u_r &=& \displaystyle - \frac{1}{R^2 \sin \Theta }\dpa{\Psi}{\Theta}, \\ \\
-\displaystyle u_z &=& \displaystyle  \frac{1}{R \sin \Theta}\dpa{\Psi}{R}.
+\displaystyle u_R &=& \displaystyle - \frac{1}{R^2 \sin \Theta }\dpa{\Psi}{\Theta}, \\ \\
+\displaystyle u_\Theta &=& \displaystyle  \frac{1}{R \sin \Theta}\dpa{\Psi}{R}.
 \end{array}
 \right.
 \end{equation}
@@ -897,7 +964,7 @@ $$
 $$
 
 $$
-\int_\Omega \gradient f dV 
+\int_\Omega \gradient (f) dV 
 =
 \oint_\Sigma f \vec{n} d S
 $$
@@ -908,7 +975,13 @@ $$
 \oint_\Sigma \vec{A} \wedge \vec{n} d S
 $$
 
-
+Pour une surface ouverte $\Sigma$ (associée à un vecteur normal $\vec{n}$) bordée par un contour $\Gamma$ (associé à un vecteur tangent $\vec{t}$) orienté positivement :
+ 
+$$
+\int_\Sigma \rot ( {\vec A}) \cdot \vec{n} dS 
+=
+\oint_\Gamma \vec{A} \cdot \vec{t} d \ell  
+$$
 
 
 

@@ -1,10 +1,10 @@
-% !TEX root = TD_fluides_part1_2018.tex
+% !TEX root = TD_fluides_part1.tex
 
 \section{Hydrostatique}
 
 
 \setcounter{subsection}{-1}
-\subsection{$^*$ Forces de pression sur un barrage}
+\subsection{Forces de pression sur un barrage}
 
 %\begin{figure}[H]
 %\includegraphics[width=\linewidth]{Biplan.eps}
@@ -36,19 +36,6 @@ rapport au point $O$.
 
 
 
-\subsection{Modèle d'atmosphère normalisée}
-
-Le {\em modèle d'atmosphère normalisée }  ( \verb| http://fr.wikipedia.org/wiki/Atmosphère_normalisée | )
-est un modèle adopté internationalement qui découpe l'atmosphère en sept couches successives
-dans lesquelles la température est donnée par une loi affine de la forme 
-$$T(z) = T_0 ( 1 - \alpha z)$$
-
-On considère ici uniquement la couche inférieure appelée troposphère ($0<z<11km$) dans laquelle
-les paramètres de cette loi sont  $\alpha = 22.6 \cdot 10^{-6} m^{-1}$ et $T_0 = 288 K$.  
-
-Donnez les loi $P(z)$ et $\rho(z)$ correspondantes, sachant que la pression au niveau du sol
-est $P_0 = 1013 hPa$.
-
 \subsection{La montgolfière}
 
 On considère une montgolfière, constituée d'un ballon sphérique et de 
@@ -59,9 +46,29 @@ pour pouvoir voler à l'altitude de $h=1000m$.
 
 \begin{enumerate}
 
-\item En utilisant le modèle d'atmosphère standard, donnez la masse volumique 
-$\rho_{ext}$, la température $T_{ext}$ et la pression $P_{ext,h}$ caractérisant l'air à l'extérieur 
+\item En utilisant un modèle d'atmosphère isotherme à tempérarure $T_0 =15^0C = 288K$, donnez les lois $P(z)$ et $\rho(z)$ sachant que la pression au niveau du sol est $P_0 = 1024 hPa$.
+
+\rep{ 
+On écrit la loi de l'hydrostatique :
+$$
+\frac{\partial p}{\partial z } = - \rho g = - \frac{g p}{rT_0 };
+$$
+Celle-ci s'intègre alors :
+$$
+\log p - \log p_0  =  - \frac{g z }{ \alpha r T_0}  
+$$
+Et donc :
+$$
+p = p_0 e^{-  \frac{g z }{ \alpha r T_0} }
+$$
+}
+
+
+\item Donnez la masse volumique 
+$\rho_{ext}$ ainsi que la pression $P_{ext,h}$ caractérisant l'air à l'extérieur 
 de la montgolfière à l'altitude $h = 1000m$ correspondant à la base du ballon.
+
+\rep{ $ P = 909 hPa$, $\rho = 1.1002 kg/m^3$}
 
 \item
 Quelle erreur commet-on en supposant la masse volumique constante à l'échelle du ballon ? 
@@ -69,24 +76,71 @@ Montrez que dans cette approximation la pression peut être approximée par une 
 de la forme $P_{ext}(z') \approx P_{ext,h}+a z'$ où $z' = z-h_0$ est l'altitude comptée à partir
 de la base du ballon.
 
-
+\rep{ 
+En remplaçant $z=1000m$ par $z=10016m$ (2x le rayon) on trouve une variation de masse volumique de 0,3 \%$.
+On peut supposer $\rho \approx \rho_h$ et $P_{ext} = p_h - \rho_h g z'$.
+}
+  
 \item Le ballon est rempli d'air de masse volumique $\rho_{int}$ supposée uniforme.
 Donnez la loi de pression $P_{int}(z')$ à l'intérieur du ballon.
 
+\rep{ 
+ $P_{int} = P_{ext,h} - \rho_{int} g z'$.
+}
+
 \item Calculez la résultante des efforts exercés par l'air sur le ballon.
+
+\rep{Poser l'intégrale en coordonnés sphériques...}
 
 \item Retrouvez le résultat précédent à l'aide du théorème d'Archimède.
 
+\rep{
+$ 
+F = ( \rho_{ext} - \rho_{int} ) m g 
+$
+}
+
 \item Application : calculez la valeur de $\rho_{int}$ nécessaire pour 
 maintenir la montgolfière en équilibre à l'altitude 1000m, considérant que 
-sa masse totale est $m=2500kg$. En déduire la température $T_{int}$
+sa masse totale est $m=600kg$. En déduire la température $T_{int}$
 mesurée à la base du ballon.
+
+\rep{ On trouve $\rho_{int} = \rho_{ext} - m/V = 0.821 kg/m^3$.
+La température correspondante est alors $T_{int} = 397 K = 124 K$.
+}
+
+
 
 \end{enumerate} 
 
 
 
+\subsection{Modèle d'atmosphère normalisée}
 
+Le {\em modèle d'atmosphère normalisée }  ( \verb| http://fr.wikipedia.org/wiki/Atmosphère_normalisée | )
+est un modèle adopté internationalement qui découpe l'atmosphère en sept couches successives
+dans lesquelles la température est donnée par une loi affine de la forme 
+$$T(z) = T_0 ( 1 - \alpha z)$$. On considère ici uniquement la couche inférieure appelée troposphère ($0<z<11km$) dans laquelle
+les paramètres de cette loi sont  $\alpha = 22.6 \cdot 10^{-6} m^{-1}$ et $T_0 = 288 K$.  
+
+Donnez les loi $P(z)$ et $\rho(z)$ correspondantes, sachant que la pression au niveau du sol
+est $P_0 = 1013 hPa$.
+
+\rep{ 
+On écrit la loi de l'hydrostatique :
+$$
+\frac{\partial p}{\partial z } = - \rho g = - \frac{g p}{rT_0 ( 1 - \alpha z ) };
+$$
+Celle-ci s'intègre alors :
+$$\log p - \log p_0  =  \frac{g}{ \alpha r T_0}   \log (1- \alpha z) 
+$$
+Et donc :
+$$
+p = p_0 {\left( 1 - \alpha z \right)}^{\frac{g}{ \alpha r T_0} }  
+$$
+}
+
+Répondre à la dernière question de l'exercice précédent dans le cas de ce modèle d'atmosphère amélioré.
   
 \subsection{Envasement d'une barge}
 
@@ -112,21 +166,19 @@ s'enfonce dans la vase, que l'on considère comme un fluide de masse volumique
 $\rho_v = 2 \rho_e$.
 Calculez la profondeur d'envasement $e$.
 
-\item Calculez l'allègement qu'il faudrait faire subir à la barge pour éviter
-son envasement.
+%\item Calculez l'allègement qu'il faudrait faire subir à la barge pour éviter
+%son envasement.
 
 
 \end{enumerate}  
 
 
-\subsection{$*$ Lois de pression et de température en fonction de la profondeur}
+\subsection{Lois de pression et de température dans l'océan}
 
 On cherche à estimer les lois de pression $P(z)$ et de 
 masse volumique $\rho(z)$ dans l'océan en fonction de la profondeur $z$.
 Les altitudes $z$ sont comptées vers le bas à partir de la surface
-de l'océan, et la pression au niveau de la mer est $P_0 = 1,013 Bars$.
-
-On donne les informations suivantes :
+de l'océan, et la pression au niveau de la mer est $P_0 = 1,013 Bars$, en utilisant les modèles suivants:
 
 \begin{itemize}
 
@@ -137,11 +189,12 @@ thermocline). On suppose pour simplifier que la salinité est constante ($S = 35
 
 On supposera que dans la thermocline la compressibilité est négligeable, de sorte que 
 la masse volumique dépend seulement de la température, et est donnée par la relation 
-simplifiée suivante (issue de l'équation d'état officielle IES80, avec $T$ en $^o C$, $\rho$ en $kg/m^3$ ) :
-$$ 
+simplifiée suivante (issue de l'équation d'état officielle IES80, avec $T$ en $^o C$, $\rho$ en $kg/m^3$ cf. Formulaire A3) :
+
+$
 \rho = 1028.15 - 0.05403 \times T - 0.006762\times  T^2 +7.955\cdot 10^{-5} \times T^3 - 9.3152 \cdot 10^{-7} \times T^4
 + 6.5363  \cdot 10^{-9}  \times T^5.
-$$
+$
 
 
 %$\rho$ évolue notablement, principalement 
@@ -153,16 +206,14 @@ $$
 %la température est $T_1 = 1.5 ^o C$.
 
 
-\item Dans les couches plus profondes,  à cause de la compressibilité de l'eau de mer, la masse volumique et la température varient (faiblement) en fonction de la pression.
-
-On supposera que dans les couches profondes les coefficients
+\item Dans les couches plus profondes,  à cause de la compressibilité de l'eau de mer, la masse volumique et la température varient (faiblement) en fonction de la pression. On supposera que dans les couches profondes les coefficients
 thermodynamiques et thermoélastiques sont constants, et ont les valeurs suivantes :
 
-$$
+$
 \chi_s = 4.6 \cdot 10^{-10} Pa^{-1} ; \quad 
 \alpha_p = 8 \cdot 10^{-5} K^{-1} ; \quad 
 c_p = 4000 J \cdot K^{-1} \cdot kg^{-1}.  
-$$
+$
 
 %où $\rho_1$ et $P_1$ sont les valeurs à la base de la thermocline, 
 %et $K$ est un "coefficient d'élasticité", 

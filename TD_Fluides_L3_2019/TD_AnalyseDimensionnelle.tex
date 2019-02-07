@@ -9,7 +9,7 @@
 
 %\section{Résistance à l'avancement d'un pétrolier}
 
-On cherche à déterminer la résistance à l'avancement d'un petit bateau de pêche naviguant dans de l'eau de mer à la vitesse nominale $U = 6 m/s$
+On cherche à déterminer la résistance à l'avancement d'un petit bateau de pêche naviguant dans de l'eau de mer à la vitesse nominale {\color{red} $U = 4 m/s$}.
 La longueur du navire est de $L = 10 m$, et sa surface mouillée est de $S = 37,64 m^2$. 
 
 %La masse volumique de l'eau vaut $\rho = 1026 kg/m^3$ pour le navire. La viscosité cinématique de l'eau est $\nu = 1.188 10^{-6} m /s^2$.
@@ -20,17 +20,76 @@ La longueur du navire est de $L = 10 m$, et sa surface mouillée est de $S = 37,
 
 \item Listez tous les paramètres physiques pertinents et indépendants ayant une influence sur la force de résistance.
 
+\rep{ Liste des paramètres retenus : $U,L,\rho,g,\nu$ (ou $\mu$),
+
+Paramètres non retenus :
+\begin{itemize}
+\item $P_0$ (pression de référence "atmosphérique). Justifications possibles : 
+$(i)$ expérimentale ; on constate que la traînée ne varie pas en fonction des conditions météo. 
+$(ii)$ La force due à la pression est une intégrale de $P$ sur une surface fermée, si on modifie la pression de référence (on remplace $P$ par $P+ \delta_P$ partout) 
+  l'intégrale correspondante n'est pas modifiée  (cf. chap. 2 et souvenirs de L2 normalement).
+$(iii)$  les équations du mouvement du fluide incompressible (NS) sont invariantes lorsque l'on change $P_0$ en $P_0'$ (cf. chap. 5).
+
+\item $T_0$ : les transferts thermiques ne sont pas pertinents dans ce problème (et de + $T_0$ n'est pas indépendant car pour un fluide incompressible $\rho = \rho(T)$)
+
+\item $\rho_a,\mu_a$ (densité de l'air ; car 1000 fois plus faible que celle de l'eau, la résistance exercée par l'air est donc négligeable)
+
+\item Si on retient $\nu$, $\mu$ n'est pas indépendant (ou inversement).
+
+\item Largeur $\ell$, hauteur $H$, autres dimensions, etc... car si l'on considère une géométrie de bateau donnée, celles-ci sont toutes proportionnelles à la longueur $L$.
+(en revanche si l'on considère une famille de géométries dont on souhaite faire varier les caractéristiques, il pourra être pertinent de rajouter des paramètres géométriques comme $\ell/L$ , etc... , mais ici dans la suite on utilisera une maquette géométriquement similaire )
+
+\item  De même la surface mouillée $S$ n'est pas indépendante car $S = \equiv L^2$, le volume non plus.
+
+\item La masse du bateau n'est pas pertinente (elle intervient dans le bilan des forces verticales, mais n'est pas pertinente dans la force horizontale) 
+
+\item De même pour toutes les autres propriétés du bateau (répartition de masse à l'intérieur de celui-ci, etc...) 
+
+\item etc... (l'age du capitaine n'est pas pertinent non plus !)
+
+\end{itemize}
+
+NB les valeurs de $\rho,\nu$,etc... sont données dans le tableau "annexe B".
+
+}
+
+
+
 \item En déduire que la résistance à l'avancement peut se mettre sous la forme suivante :
 
 $$ 
 R_T = \frac{1}{2} \rho S U^2 \cdot  C_T \left( \frac{U L}{\nu} , \frac{U}{\sqrt{gL}} \right) 
 $$  
 
+\rep{
+Méthode : on part de la relation $R_T = {\cal F}(U,L,\rho,g,\nu)$. On liste les dimensions physiques des variables retenues.
+On met sous forme adimensionnelle sous la forme 
+$$
+\frac{R_T}{ [M] [L] [T]^{-2} }  = \overline{{\cal F}} \left( \frac{U}{[L] [T]^-1},\frac{L}{[L]},\frac{\rho}{[M] [L]^{-3}},\frac{g}{[L] [T]^{-2}},\frac{\nu}{[L]^2 [T]^{-1}} \right)
+$$
+
+Le choix le plus judicieux est $[L] = L$, $[M] = \rho L^3$, $[T] = L/U$. On arrive alors à : 
+$$
+\frac{R_T}{ \rho L^2 U^2 }  = \overline{{\cal F}}\left(1,1,1,\frac{gL }{U^2},\frac{\nu}{L U} \right) 
+$$
+ce qui est équivalent à la forme recherchée (NB par convention on préfère faire apparaître $S$ plutôt que $L^2$ , c'est équivalent dimensionnellement mais plus pratique à l'usage) .
+}
+
+
+
+
 \item Quels nombres adimensionnels classiques reconnaissez-vous là ? quelle est leur interprétation ?
+
+\rep{
+On reconnaît les nombres de Froude et Reynolds (s'aider du tableau "annexe A").
+
+Inteprétations : $Re$ = Effets inertiels / Effets visqueux, $Fr$ = effets inertiels /effets gravitationnels). NB : ici les effets gravitationnels se manifestent par la création de vagues. Autre interprétation : $Fr$ =  vitesse du bateau / vitesse des vagues. Analogie avec le nombre de Mach (mais en réalité c'est plus compliqué car les vagues sont des ondes dispersives...).
+}   
+
 
 \item Calculez la valeur de ces deux nombres dans le cas du bateau de pêche en condition réelles.
 
-\rep{ Réponse : $Fr = 0.4$, $Re = 3.54e 7$}  
+\rep{  $Fr = 0.4$, $Re = 3.0326 \cdot 10^7$.}  
 
 
 \subsubsection{Etude de similitude}
@@ -39,18 +98,23 @@ On cherche à déterminer la traînée à l'aide d'une expérience en bassin de 
 
 \item Est-il possible de faire une expérience en similitude totale (nombres de Froude et de Reynolds identiques dans l'expérience et le navire réel) ? 
 
+\rep{ Similitude de Reynolds => $U_M/U = L/L_M$ ; similitude de Froude (en gravité terrestre, $g=g_M$) => U_M /U = (L/L_M)^{-1/2}$, impossible d'assurer les deux a moins de faire l'expérience  sur une autre planète !}
+
 \item Quelle doit être la vitesse $U_m$ de la maquette si l'on souhaite respecter la similitude de Reynolds ? Que vaut alors le nombre de Froude de l'expérience ? ce cas vous semble-t-il réaliste ?
+
+	\rep{ $U_m = 40m/s$, $Fr_m = 12.77$, la structure du champ de vagues va être très différente...}
+
 
 \item Quelle doit être la vitesse $U_m$ de la maquette si l'on souhaite respecter la similitude de Froude ? Que vaut alors le nombre de Reynolds $Re_m$ de l'expérience ?
 
-\rep{ $U_m = 1.26 m/s$ ; $Re_m = 1.072e6$. } 
+\rep{ $U_m = 1.26 m/s$ ; $Re_m = 1.2624e6$. } 
 
 \subsubsection{Similitude partielle sous l'hypothèse de Froude} 
 
  Lorsque $Re \gg 10^{5}$ et $Fr \le 0.4$, l'expérience montre que l'on peut faire l'hypothèse de Froude, qui consiste à supposer que la  résistance à l'avancement se décompose en deux parties données par les expressions suivantes :
 
 $$
-C_T(Re, Fr) = C_{f,0}(Re) + C_{w}(Fr) 
+C_T(Re, Fr) = {\color{red} C_v} (Re) + C_{w}(Fr) 
 $$ 
 
 où $C_v$ est le coefficient de traînée visqueuse, estimé par la loi empirique de Hugues :
@@ -61,14 +125,21 @@ $$
 et $C_{w}(Fr)$ est la traînée de vagues, qui peut être mesuré en effectuant une expérience en similitude de Froude.
 
 \item  Pour une vitesse d'avance de la maquette correspondant à celle calculée à la question 7, on mesure sur la maquette une résistance à l'avancement 
-$C_{T,m}  = 1.267 N$. 
+{\color{red} $R_{T,m}  = 2.228 N$.} 
 
 En déduire la traînée totale exercée sur le navire réel $C_T$, puis la puissance qui doit être fournie par le moteur du bateau.
 
-\rep{Rep : le coefficient de traïnée de la maquette vaut $C_{T,m} = 0.051$. En retranchant la partie visqueuse donnée par la loi de Hugues on déduit $C_w =  0.003$. 
-Donc le coefficient de traïnée du navire réel vaut $C_T = 0.003 + C_v(Re) = 0.0043$, et la traïnée totale vaut 
-$R_T = 1329 N$.
-La puissance correspondante vaut $R_T U = 5173 W= 7.23$ chevaux-vapeur. 
+\rep{Rep : le coefficient de traînée de la maquette vaut 
+
+$C_{T,m} = \frac{ R_{T,m}}{\rho_m S_m U_m^2/2} = 0.074 $. 
+
+La partie visqueuse donnée par la loi empirique vaut $C_{v}(Re_m) = 0.0044$.
+
+En retranchant les deux on déduit $C_w =  0.003$, qui est le même que pour le navire réel.
+ 
+Donc le coefficient de traînée du navire réel vaut $C_T = C_w + C_v(Re) = 0.003 + 0.0025 = 0.0055$, et la traînée totale vaut 
+$R_T = 1701 N$.
+La puissance correspondante vaut ${\cal P} = R_T U = 6803 W= 9,13$ chevaux-vapeur. 
 }
 
 
