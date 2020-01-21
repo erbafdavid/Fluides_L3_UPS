@@ -1,0 +1,253 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%--------------------------------------------------------------------------------------------------
+% Dimensions :
+%--------------------------------------------------------------------------------------------------
+
+\setlength{\textheight}{25cm}
+\setlength{\textwidth}{16cm}
+
+\setlength{\topmargin}{-20mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+
+% \setlength{\columnsep}{20mm}
+
+\setlength{\fboxsep}{1mm}
+\setlength{\unitlength}{1mm}
+
+%--------------------------------------------------------------------------------------------------
+% Packages :
+%--------------------------------------------------------------------------------------------------
+
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[french]{babel}    % pour franciser le document
+
+\usepackage[latin1]{inputenc} % pour utiliser les caracteres accentues du claviers
+
+
+%--------------------------------------------------------------------------------------------------
+% Divers :
+%--------------------------------------------------------------------------------------------------
+
+\definecolor{rougefonce}{rgb}{0.7, 0.2, 0.2}
+
+\newcommand{\thickline}[2]{\linethickness{#1} \line(1, 0){#2}}
+\newcommand{\mycaption}[1]{\caption{\sl #1}}
+\newcommand{\myvec}[1]{\vec{#1}}
+
+% \pagestyle{empty}
+
+\graphicspath{{Figures/}} % chemin d'acces au repertoire des figures (par ex.)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+
+  \textsc{Université Toulouse 3 -- Paul Sabatier \hfill Année universitaire 2015-2016}
+  
+  \textsc{Mécanique des fluides \hfill L3 Mécanique}
+  
+  \vspace{0mm}
+  
+  \begin{center}
+    \thickline{0.4mm}{160}
+    \\ \vspace{3mm}
+  \textbf{\large Exercice complémentaire 1 : équation de Laplace\,-Young}
+    \\ %\vspace{1mm}
+    \thickline{0.4mm}{160}
+  \end{center}
+
+%  \vspace{0mm}
+  
+\end{center}
+
+%==================================================================================================
+\section{Introduction}
+%==================================================================================================
+
+Une molécule à l'interface entre un liquide et un gaz (ex. eau et air) 
+ou deux liquides non miscibles (ex. eau et huile) est moins entourée de molécules
+que celles qui se trouvent au c{\oe}ur du fluide.
+Il en résulte une énergie à l'interface plus élevée, un phénomène pris en compte d'un point de vue 
+thermodynamique en ajoutant à l'énergie interne une énergie de surface $\gamma A$
+où $A$ est l'aire de l'interface considérée et $\gamma$ est un coefficient (N/m) 
+appelé \textsl{tension de surface} dépendant des fluides en présence.
+Le liquide tend alors à adopter une forme qui minimise sa surface (forme sphérique en l'absence d'autres phénomènes physiques).
+A l'énergie de surface est associée une force de tension tangente à l'interface (fig.~\ref{fig:tension}), proportionnelle à la tension de surface et à la longueur de la ligne d'application de la force, et qui se manifeste par exemple
+dans le phénomène de remontée d'un liquide le long d'une paroi pour former un ménisque.
+Une conséquence de cette force de tension de surface est de conduire à une différence de pression de part et d'autre de l'interface, suivant l'équation de Laplace ou de Laplace-Young, dont la démonstration fait l'objet de cet exercice.
+
+\begin{figure}[tbh]
+  \begin{center}
+    \begin{picture}(100, 20)(0, 0)
+				\put(0, 0){\includegraphics[width=100mm]{dessin_force.png}}
+				\put(19, -5){(a)}
+				\put(72, -5){(b)}
+     \end{picture}
+  \end{center}
+  \mycaption{Forces de tension de surface sur une interface plane (a) ou sphérique (b).}
+  \label{fig:tension}
+\end{figure}
+
+%==================================================================================================
+\section{Interface à simple courbure}
+%==================================================================================================
+
+\begin{figure}[tbh]
+  \begin{center}
+    \begin{picture}(160, 45)(0, 0)
+      \put(0, 0){\includegraphics[width=50mm]{courbure_simple.pdf}}
+      \put(55, 0){\includegraphics[width=50mm]{rayon_courbure_1.pdf}}
+      \put(110, 0){\includegraphics[width=50mm]{rayon_courbure_0.pdf}}
+      \put(22, -5){(a)}
+      \put(75, -5){(b)}
+      \put(128, -5){(c)}
+      % figure (a) :
+      \put(20, 40){\footnotesize $\myvec{n} = \myvec{e}_z$}
+      \put(48, 15.5){\footnotesize $\myvec{e}_x$}
+      \put(32, 37){\footnotesize $\myvec{e}_y$}
+      \put(3, 22){\footnotesize $\gamma$}
+      \put(45, 22){\footnotesize $\gamma$}
+      \put(32, 30){\footnotesize $\gamma$}
+      \put(17, -1){\footnotesize $\gamma$}
+      \put(20, 20){$p_i$}
+      \put(18, 12){\textcolor{rougefonce}{$p_e$}}
+      % figure (b) :
+      \put(72, 35){\footnotesize $\myvec{n} = \myvec{e}_z$}
+      \put(100, 6){\footnotesize $\myvec{e}_x$}
+      \put(54, 15){\footnotesize $\gamma$}
+      \put(94, 16){\footnotesize $\gamma$}
+      \put(77.5, 15){\footnotesize $\dfrac{d\theta}{2}$}
+      \put(70, 15){\footnotesize $\dfrac{d\theta}{2}$}
+      \put(101, 12){\footnotesize $d\theta/2$}
+      \put(64, 16){\footnotesize \colorbox{white}{$R$}}
+      \put(83, 16){\footnotesize \colorbox{white}{$R$}}
+      \put(70, 1){\footnotesize \colorbox{white}{$dx = Rd\theta$}}
+      \put(68, 10){$p_i$}
+      \put(66, 5){$p_e$}
+      % figure (c) :
+      \put(128, 35){\footnotesize $\myvec{n} = \myvec{e}_z$}
+      \put(160, 6){\footnotesize $\myvec{e}_y$}
+      \put(129, 1){\footnotesize \colorbox{white}{$dy$}}
+      \put(113, 8){\footnotesize $\gamma$}
+      \put(149, 8){\footnotesize $\gamma$}
+      \put(122, 8.5){$p_i$}
+      \put(122, 3.5){$p_e$}
+     \end{picture}
+  \end{center}
+  \mycaption{Forces de tension de surface sur une interface à simple courbure (a) :
+  						projection dans le plan $(\myvec{e}_x, \myvec{e}_z)$ (b) 
+						et dans le plan $(\myvec{e}_y, \myvec{e}_z)$ (c).}
+  \label{fig:simple_courbure}
+\end{figure}
+
+On considère dans cette première partie une interface entre deux fluides non miscibles présentant
+localement une courbure unique (cf. fig.~\ref{fig:simple_courbure}).
+La pression à l'intérieur de la courbure sera notée $p_i$, et la pression à l'extérieur $p_e$.
+$\myvec{n}$ désigne la normale locale à l'élément d'interface infinitésimal de surface $dS=dx\times dy$.
+En écrivant l'équilibre mécanique de cet élément d'interface, montrer que la pression présente un saut 
+donné par 
+\begin{equation}
+	p_i - p_e = \frac{\gamma}{R}
+	\label{eq:simple_courbure}
+\end{equation}
+où $R$ désigne le rayon de courbure local de l'interface.
+
+%==================================================================================================
+\section{Interface à double courbure}
+%==================================================================================================
+
+\begin{figure}[tbh]
+  \begin{center}
+    \begin{picture}(160, 45)(0, 0)
+      \put(0, 0){\includegraphics[width=50mm]{courbure_double.pdf}}
+      \put(55, 0){\includegraphics[width=50mm]{rayon_courbure_1.pdf}}
+      \put(110, 0){\includegraphics[width=50mm]{rayon_courbure_2.pdf}}
+      \put(22, -5){(a)}
+      \put(75, -5){(b)}
+      \put(128, -5){(c)}
+      % figure (a) :
+      \put(22, 35){\footnotesize $\myvec{n} = \myvec{e}_z$}
+      \put(48, 13.5){\footnotesize $\myvec{e}_x$}
+      \put(33, 33){\footnotesize $\myvec{e}_y$}
+      \put(6, 19){\footnotesize $\gamma$}
+      \put(45, 19){\footnotesize $\gamma$}
+      \put(29, 31){\footnotesize $\gamma$}
+      \put(14, -1){\footnotesize $\gamma$}
+      \put(21, 17){$p_i$}
+      \put(19, 11){\textcolor{rougefonce}{$p_e$}}
+      % figure (b) :
+      \put(72, 35){\footnotesize $\myvec{n} = \myvec{e}_z$}
+      \put(100, 6){\footnotesize $\myvec{e}_x$}
+      \put(54, 15){\footnotesize $\gamma$}
+      \put(94, 16){\footnotesize $\gamma$}
+      \put(77.5, 15){\footnotesize $\dfrac{d\theta_1}{2}$}
+      \put(70, 15){\footnotesize $\dfrac{d\theta_1}{2}$}
+      \put(101, 12){\footnotesize $d\theta_1/2$}
+      \put(64, 16){\footnotesize \colorbox{white}{$R_1$}}
+      \put(83, 16){\footnotesize \colorbox{white}{$R_1$}}
+      \put(67, 1){\footnotesize \colorbox{white}{$dx = R_1d\theta_1$}}
+      \put(68, 10){$p_i$}
+      \put(66, 5){$p_e$}
+      % figure (c) :
+      \put(125.5, 10){\footnotesize \colorbox{white}{$\myvec{n} = \myvec{e}_z$}}
+      \put(151, 4.5){\footnotesize $\myvec{e}_y$}
+      \put(113, 13){\footnotesize $\gamma$}
+      \put(145, 13){\footnotesize $\gamma$}
+      \put(131.5, 19){\footnotesize $\dfrac{d\theta_2}{2}$}
+      \put(124, 19){\footnotesize $\dfrac{d\theta_2}{2}$}
+      \put(157, 10){\footnotesize $d\theta_2/2$}
+      \put(119, 16){\footnotesize \colorbox{white}{$R_2$}}
+      \put(138, 16){\footnotesize \colorbox{white}{$R_2$}}
+      \put(122, 1){\footnotesize \colorbox{white}{$dy = R_2 d\theta_2$}}
+      \put(121, 8.5){$p_i$}
+      \put(119, 3.5){$p_e$}
+     \end{picture}
+  \end{center}
+  \mycaption{Forces de tension de surface sur une interface à double courbure (a) :
+  						projection dans le plan $(\myvec{e}_x, \myvec{e}_z)$ (b) 
+						et dans le plan $(\myvec{e}_y, \myvec{e}_z)$ (c).}
+  \label{fig:double_courbure}
+\end{figure}
+
+On considère dans cette seconde partie le cas général d'une interface entre deux fluides non miscibles
+ayant une courbure supplémentaire (cf. fig.~\ref{fig:double_courbure}).
+En écrivant l'équilibre mécanique de l'élément d'interface, montrer que la pression vérifie 
+dans ce cas l'équation de Laplace-Young générale
+\begin{equation}
+	p_i - p_e = \gamma \left ( \frac{1}{R_1} + \frac{1}{R_2} \right )
+	\label{eq:double_courbure}
+\end{equation}
+où $R_1$ et $R_2$ désignent les rayons de courbure principaux de l'interface (fig.~\ref{fig:double_courbure}).
+
+\bigskip
+
+\noindent
+\textbf{Questions subsidiaires :}
+
+\begin{enumerate}
+\item
+En partant de la relation générale (\ref{eq:double_courbure}), 
+retrouver le résultat particulier précédent (\ref{eq:simple_courbure}).
+\item
+Quel est le saut de pression à la traversée d'une interface sphérique ?
+\item
+Même question à la traversée d'une bulle de savon sphérique ?
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

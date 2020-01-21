@@ -1,0 +1,177 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%--------------------------------------------------------------------------------------------------
+% Dimensions :
+%--------------------------------------------------------------------------------------------------
+
+\setlength{\textheight}{25cm}
+\setlength{\textwidth}{16cm}
+
+\setlength{\topmargin}{-20mm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+
+% \setlength{\columnsep}{20mm}
+
+\setlength{\fboxsep}{1mm}
+\setlength{\unitlength}{1mm}
+
+%--------------------------------------------------------------------------------------------------
+% Packages :
+%--------------------------------------------------------------------------------------------------
+
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[french]{babel}    % pour franciser le document
+
+\usepackage[latin1]{inputenc} % pour utiliser les caracteres accentues du claviers
+
+
+%--------------------------------------------------------------------------------------------------
+% Divers :
+%--------------------------------------------------------------------------------------------------
+
+\definecolor{rougefonce}{rgb}{0.7, 0.2, 0.2}
+
+\newcommand{\thickline}[2]{\linethickness{#1} \line(1, 0){#2}}
+\newcommand{\mycaption}[1]{\caption{\sl #1}}
+\newcommand{\myvec}[1]{\vec{#1}}
+
+\pagestyle{empty}
+
+\graphicspath{{Figures/}} % chemin d'acces au repertoire des figures (par ex.)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+
+  \textsc{Université Toulouse 3 -- Paul Sabatier \hfill Année universitaire 2015-2016}
+  
+  \textsc{Mécanique des fluides \hfill L3 Mécanique}
+  
+  \vspace{0mm}
+  
+  \begin{center}
+    \thickline{0.4mm}{160}
+    \\ \vspace{3mm}
+  \textbf{\large Exercice complémentaire 1 : équation de Laplace\,-Young (correction)}
+    \\ %\vspace{1mm}
+    \thickline{0.4mm}{160}
+  \end{center}
+
+%  \vspace{0mm}
+  
+\end{center}
+
+\stepcounter{section}
+
+\medskip
+
+%==================================================================================================
+\section{Interface à simple courbure}
+%==================================================================================================
+
+\noindent
+Force de pression sur l'interface exercée par le fluide à l'intérieur de la courbure : 
+$d\myvec{F}_i = -p_i \, \myvec{n} \, dS$.
+\\
+Force de pression sur l'interface exercée par le fluide à l'extérieur de la courbure : 
+$d\myvec{F}_e = p_e \, \myvec{n} \, dS$.
+\\
+D'où la composante verticale des forces de pression : $dF_z = (p_e-p_i) \, dS$.
+
+\medskip
+\noindent
+Composante verticale de la force de tension de surface (figs. 2b et 2c) :
+
+$dT_z = 2 \times \gamma \times dy \times \sin (d\theta/2) \sim \gamma d\theta dy$,
+car $\sin (d\theta/2) \sim d\theta / 2$ pour $|d\theta| \ll 1$.
+
+\medskip
+\noindent
+Equilibre des forces verticales : 
+
+$dF_z+dT_z = 0$, soit $(p_e-p_i) \, dS + \gamma d\theta dy = 0$,
+avec $dS = dx\, dy = Rd\theta \, dy$, 
+
+d'où $p_e - p_i + \gamma/R = 0$,
+ou encore \fbox{$p_i - p_e = \gamma/R$}
+
+\medskip
+
+%==================================================================================================
+\section{Interface à double courbure}
+%==================================================================================================
+
+\noindent
+La composante verticale des forces de pression est identique au cas précédent : $dF_z = (p_e-p_i) \, dS$.
+
+\medskip
+\noindent
+Composante verticale de la force de tension de surface (figs. 3b et 3c) :
+
+$dT_z = 2 \times \gamma \times dy \times \sin (d\theta_1/2) + 2 \times \gamma \times dx \times \sin (d\theta_2/2)
+\sim \gamma d\theta_1 dy + \gamma d\theta_2 dx$,
+
+car $\sin (d\theta_1/2) \sim d\theta_1 / 2$ et $\sin (d\theta_2/2) \sim d\theta_2 / 2$ 
+pour $|d\theta_1| \ll 1$ et $|d\theta_2| \ll 1$.
+
+\medskip
+\noindent
+Equilibre des forces verticales : 
+
+$dF_z+dT_z = 0$, soit $(p_e-p_i) \, dS + \gamma ( d\theta_1 dy + d\theta_2 dx ) = 0$,
+
+avec $dx = R_1 d\theta_1$, $dy = R_2d\theta_2$ et donc $dS = dx\, dy = R_1 R_2 d\theta_1 d\theta_2$. 
+
+On en déduit $p_e-p_i \, dS + \gamma ( 1/R_1 + 1/R_2 ) = 0$
+ou encore \fbox{$p_i - p_e = \gamma( 1/R_1 + 1/R_2 )$}
+
+\medskip
+
+\noindent
+\textbf{Questions subsidiaires :}
+
+\begin{enumerate}
+\item
+Le cas de la courbure simple correspond aux rayons de courbure principaux $R_1=R$ (fig. 2b) et $R_2=\infty$
+(fig. 2c : une portion de droite a une courbure nulle et donc un rayon de courbure infini).
+On en déduit $1/R_1 + 1/R_2 = 1/R + 0$ d'où \fbox{$p_i - p_e = \gamma /R$}
+\item
+Pour une interface sphérique (par ex. une petite bulle d'air dans l'eau, une goutelette d'eau dans l'air,
+ou encore une goutelette d'huile dans l'eau), les deux rayons de courbure principaux sont identiques :
+$R_1 = R_2 = R$ où $R$ désigne le rayon de l'interface sphérique.
+\\
+On en déduit $1/R_1 + 1/R_2 = 1/R + 1/R = 2/R$ d'où \fbox{$p_i - p_e = 2\gamma /R$}
+\item
+La bulle de savon est constituée d'une mince film liquide de savon de forme sphérique enserrant une volume d'air.
+Il s'agit donc d'une double interface. On notera $R$ le rayon de la bulle, $p_e$ la pression de l'air à l'extérieur, 
+$p_0$ la pression
+dans le film liquide, et $p_i$ la pression de l'air dans la bulle.
+
+L'équation de Laplace au passage de la première interface entre l'air extérieur et le liquide du film donne :
+$p_0 - p_e = 2\gamma/R$ (cf. question précédente).
+
+En supposant que le film est mince, le rayon de la seconde interface, entre le liquide du film et l'air à l'intérieur de la bulle, est très peu différent du rayon externe $R$. 
+L'équation de Laplace à la traversée de cette interface s'écrit alors : 
+$p_i - p_0 = 2\gamma/R$.
+
+On en déduit le saut de pression à la traversé de la bulle : \\
+$p_i - p_e = (p_i-p_0) + (p_0-p_e) = 2\gamma/R + 2\gamma/R$ d'où \fbox{$p_i - p_e = 4\gamma/R$}.
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
